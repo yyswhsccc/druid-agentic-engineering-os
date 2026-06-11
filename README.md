@@ -16,6 +16,7 @@ Last audited: **2026-06-11**.
 |---|---:|---|
 | Merged PRs overall | 47 | Publicly merged work across RustChain and selected external repositories. |
 | RustChain merged PRs | 45 | Public maintainer-reviewed outcomes in a real open-source codebase. |
+| Full merged evidence board | 46 proof items | All RustChain merged PRs plus one selected external merged PR, grouped by technical surface. |
 | Current RustChain review queue | 36 open PRs | Test-backed queue across payout, bridge, UTXO, governance, bounty, security, and reliability surfaces. |
 | New weekly queue | 34 clean PRs opened on 2026-06-11 | Shows systematic risk-surface discovery and small reviewable PR slicing. |
 | Outside RustChain merged proof | 1 selected merged PR | Shows the framework can transfer beyond one repo when the target has real review activity. |
@@ -32,6 +33,7 @@ Open PRs are review-queue evidence, not merge or reward claims.
 | Review tracking | Follows CI, maintainer feedback, merge/close states, and maintenance cost. |
 | Adaptive memory | Learns from merged, superseded, closed, stale, dirty, and rewarded work. |
 | Stop-loss | Reduces maintenance on zombie PRs and stops work when evidence, reward, or review quality is weak. |
+| Token budget discipline | Routes expensive reasoning to selection, patches, tests, and review replies while routine tracking runs through ledgers, CLI checks, and dedupe gates. |
 
 ## Architecture
 
@@ -59,6 +61,7 @@ This repository is designed to publish a GitHub Pages portfolio from `docs/`.
 - Druid case study: `docs/druid.html`
 - Weekly command log: `docs/week.html`
 - Evidence board: `docs/evidence.html`
+- Token budget audit: `docs/token.html`
 - Contact: `docs/contact.html`
 
 ## Links

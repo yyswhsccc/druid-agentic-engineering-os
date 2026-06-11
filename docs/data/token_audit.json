@@ -1,0 +1,41 @@
+{
+  "last_audited": "2026-06-11",
+  "source": "local operational logs under ~/.codex/bounty-radar",
+  "note": "Operational signals, not a billing statement.",
+  "visible_token_markers": {
+    "events": 92,
+    "total_tokens": 16335686,
+    "top_buckets": [
+      {"bucket": "daily-macro-doctor-codex.log", "events": 27, "tokens": 6158263, "max_single_event": 507614},
+      {"bucket": "hourly-doctor-codex.log", "events": 20, "tokens": 3703984, "max_single_event": 518378},
+      {"bucket": "codex-pr.log", "events": 16, "tokens": 2756864, "max_single_event": 355882},
+      {"bucket": "diplomat-codex.log.gz", "events": 14, "tokens": 1748864, "max_single_event": 226248},
+      {"bucket": "maintenance-codex.log", "events": 11, "tokens": 1257029, "max_single_event": 203255},
+      {"bucket": "diplomat-learning-codex.log.gz", "events": 3, "tokens": 694356, "max_single_event": 264878}
+    ]
+  },
+  "maintenance_comment_gate": {
+    "candidate_records": 45276,
+    "posted_comments": 55,
+    "top_churn_prs": [
+      {"pr": 6182, "records": 9335},
+      {"pr": 6823, "records": 6776},
+      {"pr": 6842, "records": 6241}
+    ]
+  },
+  "current_open_rustchain_queue_shape": {
+    "open_prs": 36,
+    "changed_files_total": 109,
+    "additions_total": 3138,
+    "deletions_total": 331,
+    "average_changed_files_per_pr": 3.03,
+    "average_additions_per_pr": 87.2
+  },
+  "prune_policy": [
+    "Do not run broad workspace scans without repo allowlists and ignorelists.",
+    "Keep zombie PRs in low-touch mode unless new maintainer signal appears.",
+    "Replace repeated model-session quota probes with cheaper state checks when possible.",
+    "Use templated owner pings and comment dedupe; reserve model calls for nuanced reviewer replies.",
+    "Drop low-return repos after cheap bounty/review/merge signal checks."
+  ]
+}

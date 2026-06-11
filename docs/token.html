@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Token Budget | Druid</title>
+  <meta name="description" content="Druid token budget audit, pruning policy, and low-touch maintenance discipline.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="brand" href="index.html"><strong>Druid</strong><span>Agentic Engineering OS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="druid.html">System</a>
+        <a href="week.html">This Week</a>
+        <a href="evidence.html">Evidence</a>
+        <a class="active" href="token.html">Token Budget</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="shell">
+        <span class="eyebrow">Operational audit</span>
+        <h2>Token budget discipline is part of the framework</h2>
+        <p class="section-intro">Druid is not valuable because it pretends model calls are free. It is valuable because the framework routes expensive reasoning toward high-value PR selection, patching, testing, and review response, while routine tracking runs through GitHub API data, JSON ledgers, dedupe gates, and stop-loss rules.</p>
+        <div class="audit-grid">
+          <article class="audit-card">
+            <span class="number">16.3M</span>
+            <span class="label">tokens visible in local Codex token markers across 92 marked events.</span>
+          </article>
+          <article class="audit-card">
+            <span class="number">6.16M</span>
+            <span class="label">largest visible bucket: daily macro doctor Codex runs.</span>
+          </article>
+          <article class="audit-card">
+            <span class="number">55</span>
+            <span class="label">maintenance comments posted from 45,276 candidate records.</span>
+          </article>
+          <article class="audit-card">
+            <span class="number">3.03</span>
+            <span class="label">average files touched per open RustChain PR in the current 36-PR queue.</span>
+          </article>
+        </div>
+        <p class="small">Audit source: local Druid/Codex logs under <code>~/.codex/bounty-radar</code>, checked on 2026-06-11. These are operational signals, not a billing statement.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Where the tokens were going</h2>
+        <div class="surface-grid">
+          <article class="surface-card">
+            <h3>Doctor loops</h3>
+            <p><strong>Observed:</strong> daily macro doctor and hourly doctor logs account for the largest visible token markers: about 9.86M combined.</p>
+            <p><strong>Policy:</strong> keep doctor work for real failures and weekly summaries; avoid high-frequency broad self-analysis.</p>
+          </article>
+          <article class="surface-card">
+            <h3>PR generation and maintenance</h3>
+            <p><strong>Observed:</strong> Codex PR and maintenance Codex logs account for about 4.01M visible tokens.</p>
+            <p><strong>Policy:</strong> spend here when the output is a bounded patch, regression test, CI fix, or useful reviewer response.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Diplomat / communication loops</h3>
+            <p><strong>Observed:</strong> diplomat and diplomat-learning Codex logs account for about 2.44M visible tokens.</p>
+            <p><strong>Policy:</strong> use templated owner pings and summary rules; reserve model calls for nuanced maintainer replies.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Quota probes</h3>
+            <p><strong>Observed:</strong> one quota probe that only printed <code>CODEX_QUOTA_OK</code> still consumed 15,806 tokens.</p>
+            <p><strong>Policy:</strong> replace repeated model-session probes with cheaper state checks whenever possible.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>What gets pruned</h2>
+        <div class="surface-grid">
+          <article class="surface-card">
+            <h3>Whole-workspace scans</h3>
+            <p>Broad recursive searches can wander into unrelated cloned repositories and documentation trees. Druid needs repo allowlists and ignorelists before spending reasoning on search results.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Zombie PR maintenance</h3>
+            <p>Old PRs such as #6182 and #6823 generated disproportionate maintenance ledger churn. They should remain low-touch unless new reviewer signal appears.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Duplicate public comments</h3>
+            <p>The maintenance ledger recorded 45,276 candidate records but only 55 posted comments. That gating is good; the next step is reducing repeated local candidate generation too.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Low-return repo exploration</h3>
+            <p>Repos without reliable bounty, review, merge, or reward signals should not receive expensive agent attention after the initial cheap check.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Why this matters for Druid</h2>
+        <p class="section-intro">The current RustChain queue shows the operating principle: 36 open PRs, 109 changed files total, about 87 additions and 9 deletions per PR on average. The work is small, test-backed, and organized by risk surface. That is the token story: use reasoning to choose and prove compact high-signal changes, then let ledgers and cheap checks carry routine tracking.</p>
+        <div class="tag-list">
+          <span class="tag">high-value model calls</span>
+          <span class="tag">ledger-first maintenance</span>
+          <span class="tag">dedupe before posting</span>
+          <span class="tag">stop-loss for stale work</span>
+          <span class="tag">repo allowlists</span>
+          <span class="tag">bounded PR slices</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell"><p><a href="druid.html">Back to system architecture</a> / Built by Yongshan Yu.</p></div></footer>
+</body>
+</html>

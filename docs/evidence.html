@@ -16,6 +16,7 @@
         <a href="druid.html">System</a>
         <a href="week.html">This Week</a>
         <a class="active" href="evidence.html">Evidence</a>
+        <a href="token.html">Token Budget</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -60,24 +61,18 @@
 
     <section class="section">
       <div class="shell">
-        <h2>Merged work</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>PR</th><th>Proof value</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6219">RustChain #6219</a></td><td>Signed-transfer nonce ordering with replay-focused tests; money-path correctness.</td></tr>
-              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6673">RustChain #6673</a></td><td>Deterministic pending transaction ordering; queue/state reasoning.</td></tr>
-              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6188">RustChain #6188</a></td><td>Block-save atomicity around template production; concurrency and state integrity.</td></tr>
-              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6666">RustChain #6666</a></td><td>Data custody proof checks; protocol-surface implementation.</td></tr>
-              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6667">RustChain #6667</a> / <a href="https://github.com/Scottcjn/Rustchain/pull/6674">#6674</a></td><td>Slasher evidence and slashing penalty core; validator/security economics surface.</td></tr>
-              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6838">RustChain #6838</a></td><td>Core RPC API rate limiting; public API hardening.</td></tr>
-              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6825">RustChain #6825</a></td><td>Event faucet claim codes; reward/claim workflow implementation.</td></tr>
-              <tr><td><a href="https://github.com/mgzwarrior/mgz-pkmn/pull/217">mgz-pkmn #217</a></td><td>Maintainer-approved CLI helper tests; transfer beyond RustChain.</td></tr>
-            </tbody>
-          </table>
+        <h2>All merged work, grouped by technical surface</h2>
+        <p class="section-intro">This is the complete merged proof set from the current audit: 45 RustChain merged PRs plus one selected external merged PR. The categories matter more than raw count: they show Druid repeatedly reaching different parts of a complex codebase and turning them into bounded, reviewable changes.</p>
+        <div class="hero-actions">
+          <button class="button" type="button" data-expand-merged>Expand all merged PRs</button>
+          <button class="button" type="button" data-collapse-merged>Collapse groups</button>
         </div>
+        <div data-merged-work>
+          <div class="notice">Loading merged-work evidence from <a href="data/merged_work.json">data/merged_work.json</a>.</div>
+        </div>
+        <noscript>
+          <p class="notice">JavaScript is disabled. Open <a href="data/merged_work.json">data/merged_work.json</a> for the full merged work board.</p>
+        </noscript>
       </div>
     </section>
 
@@ -129,5 +124,6 @@
   </main>
 
   <footer class="footer"><div class="shell"><p>Evidence audit timestamp: 2026-06-11.</p></div></footer>
+  <script src="assets/merged-work.js"></script>
 </body>
 </html>

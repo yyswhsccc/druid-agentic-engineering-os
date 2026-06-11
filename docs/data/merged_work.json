@@ -1,0 +1,518 @@
+{
+  "last_audited": "2026-06-11",
+  "counts": {
+    "rustchain_merged": 45,
+    "external_selected_merged": 1,
+    "merged_total_public_proof": 46
+  },
+  "groups": [
+    {
+      "name": "Money path / wallet / reward systems",
+      "summary": "Merged work touching value movement, wallet payloads, fee logic, reward claims, and contract semantics.",
+      "items": [
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6825,
+          "title": "feat: add event faucet claim codes",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6825",
+          "merged_at": "2026-06-05T01:50:29Z",
+          "technical_point": "Adds a claim-code workflow for event faucet distribution, including claim state handling and focused validation coverage.",
+          "why_it_matters": "Reward systems need explicit claim paths so event payouts are auditable instead of relying on ambiguous manual handling.",
+          "scope": "3 files, +1161/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6221,
+          "title": "feat: add EIP-1559 fee market helpers",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6221",
+          "merged_at": "2026-05-28T02:01:06Z",
+          "technical_point": "Introduces deterministic base-fee and fee-market helper logic compatible with EIP-1559-style accounting.",
+          "why_it_matters": "Fee logic sits directly on the money path; helpers make future fee changes testable and less ad hoc.",
+          "scope": "3 files, +254/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6219,
+          "title": "fix: enforce signed transfer nonce ordering",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6219",
+          "merged_at": "2026-05-28T02:01:21Z",
+          "technical_point": "Rejects signed wallet transfers with stale nonces while preserving exact duplicate replay behavior.",
+          "why_it_matters": "Wallet transfers need replay resistance and monotonic ordering to protect balance integrity.",
+          "scope": "2 files, +50/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6181,
+          "title": "feat(wallet): add multisig proposal support",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6181",
+          "merged_at": "2026-06-03T03:49:17Z",
+          "technical_point": "Adds multisig proposal primitives for wallet-side approval workflows.",
+          "why_it_matters": "Multi-party wallet operations need explicit proposal state instead of informal off-chain coordination.",
+          "scope": "2 files, +429/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6180,
+          "title": "feat: add RustChain ERC-721 NFT contract",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6180",
+          "merged_at": "2026-06-03T03:48:41Z",
+          "technical_point": "Implements ERC-721-style ownership, approvals, transfers, minter controls, and metadata URI behavior.",
+          "why_it_matters": "Contract surfaces need standard ownership and approval semantics before downstream integrations rely on them.",
+          "scope": "5 files, +324/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 5519,
+          "title": "fix: align Python SDK signed transfer payload",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/5519",
+          "merged_at": "2026-05-18T17:42:53Z",
+          "technical_point": "Moves the Python SDK to the live signed-transfer endpoint and canonical payload fields expected by server validation.",
+          "why_it_matters": "SDK drift on wallet payloads can break real transfers or teach users the wrong transaction shape.",
+          "scope": "9 files, +362/-72"
+        }
+      ]
+    },
+    {
+      "name": "Consensus / validator / chain invariants",
+      "summary": "Merged work around block production, validator duties, slashing, randomness, attestation, ordering, and chain safety metrics.",
+      "items": [
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6843,
+          "title": "feat: add reorg resistance metrics",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6843",
+          "merged_at": "2026-06-05T00:26:12Z",
+          "technical_point": "Adds metrics for observing reorg-resistance behavior at the chain level.",
+          "why_it_matters": "Consensus health needs measurable signals before operators can reason about reorg risk.",
+          "scope": "2 files, +192/-1"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6819,
+          "title": "feat: add validator attestation effectiveness metrics",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6819",
+          "merged_at": "2026-06-03T14:36:41Z",
+          "technical_point": "Adds attestation effectiveness metrics for validator performance analysis.",
+          "why_it_matters": "Validator quality needs observable effectiveness, not just raw participation counts.",
+          "scope": "4 files, +189/-13"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6674,
+          "title": "feat: add slashing penalty core",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6674",
+          "merged_at": "2026-06-03T03:47:52Z",
+          "technical_point": "Adds core slashing penalty calculation and state handling.",
+          "why_it_matters": "Validator security economics require deterministic penalty behavior before enforcement can be trusted.",
+          "scope": "3 files, +655/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6673,
+          "title": "fix: order pending txs by admission time",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6673",
+          "merged_at": "2026-06-03T03:46:31Z",
+          "technical_point": "Makes pending transaction ordering deterministic by admission time.",
+          "why_it_matters": "Mempool ordering affects fairness, replay analysis, and test reproducibility.",
+          "scope": "2 files, +222/-2"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6667,
+          "title": "feat: add slasher evidence core",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6667",
+          "merged_at": "2026-06-03T03:47:56Z",
+          "technical_point": "Adds side-effect-free slasher evidence primitives and tests.",
+          "why_it_matters": "Penalty systems need auditable evidence models before they mutate validator state.",
+          "scope": "3 files, +490/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6666,
+          "title": "feat: add data custody proof checks",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6666",
+          "merged_at": "2026-06-03T03:46:37Z",
+          "technical_point": "Adds deterministic data custody challenge and proof verification helpers.",
+          "why_it_matters": "Availability and custody claims need proof checks that validators can test and reproduce.",
+          "scope": "2 files, +455/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6220,
+          "title": "feat: add block-bound randomness beacon",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6220",
+          "merged_at": "2026-05-28T02:01:14Z",
+          "technical_point": "Adds randomness beacon helpers bound to block context.",
+          "why_it_matters": "Randomness needs deterministic chain context so it is usable in tests and resistant to accidental drift.",
+          "scope": "4 files, +559/-19"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6218,
+          "title": "feat: add weighted fork-choice duty balancing",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6218",
+          "merged_at": "2026-05-28T02:01:27Z",
+          "technical_point": "Adds deterministic weighted fallback duty balancing for fork-choice related scheduling.",
+          "why_it_matters": "Validator duty selection needs predictable balancing when multiple candidates are available.",
+          "scope": "2 files, +212/-3"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6188,
+          "title": "fix: serialize block saves with template production",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6188",
+          "merged_at": "2026-05-28T02:17:24Z",
+          "technical_point": "Serializes block persistence with template production to avoid state races.",
+          "why_it_matters": "Block production needs atomicity between generated templates and saved chain state.",
+          "scope": "2 files, +149/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6184,
+          "title": "perf: parallelize block transaction signature checks",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6184",
+          "merged_at": "2026-06-03T03:48:01Z",
+          "technical_point": "Parallelizes signature verification for larger blocks while keeping small blocks on the serial path.",
+          "why_it_matters": "Signature validation is a consensus hot path; throughput wins must preserve correctness and avoid overhead for small blocks.",
+          "scope": "2 files, +176/-3"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6179,
+          "title": "feat: add sync committee rotation tracker",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6179",
+          "merged_at": "2026-05-28T02:17:53Z",
+          "technical_point": "Tracks sync committee rotation state and related metrics.",
+          "why_it_matters": "Committee rotation is a protocol scheduling surface where observability reduces operator blind spots.",
+          "scope": "3 files, +577/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6177,
+          "title": "Add epoch transition analytics to reward dashboard",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6177",
+          "merged_at": "2026-05-28T02:18:00Z",
+          "technical_point": "Adds epoch transition analytics to reward dashboard reporting.",
+          "why_it_matters": "Reward dashboards need epoch transition visibility to explain validator payout behavior.",
+          "scope": "3 files, +228/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6176,
+          "title": "feat: add proposer duty calendar",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6176",
+          "merged_at": "2026-05-28T02:18:07Z",
+          "technical_point": "Adds proposer duty calendar views for epoch scheduling.",
+          "why_it_matters": "Operators need predictable proposer duty visibility to debug missed or upcoming duties.",
+          "scope": "5 files, +415/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6175,
+          "title": "feat: add attestation pool monitoring",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6175",
+          "merged_at": "2026-05-28T02:18:14Z",
+          "technical_point": "Adds monitoring around attestation pool state.",
+          "why_it_matters": "Attestation pipelines need pool-level visibility to diagnose validator participation and queue health.",
+          "scope": "2 files, +393/-1"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6173,
+          "title": "feat: add validator performance dashboard metrics",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6173",
+          "merged_at": "2026-05-28T02:18:27Z",
+          "technical_point": "Adds dashboard metrics for validator performance and health.",
+          "why_it_matters": "Validator systems need operational feedback loops so weak performance is visible before it becomes consensus risk.",
+          "scope": "4 files, +466/-0"
+        }
+      ]
+    },
+    {
+      "name": "State, sync, client, and storage APIs",
+      "summary": "Merged work that adds safer state abstractions, client helpers, diffs, and storage maintenance boundaries.",
+      "items": [
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6664,
+          "title": "feat(sync): add swappable state providers",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6664",
+          "merged_at": "2026-06-03T03:47:47Z",
+          "technical_point": "Adds a StateProvider boundary with SQLite, in-memory, and fallback implementations.",
+          "why_it_matters": "Sync code becomes easier to test and evolve when storage is abstracted behind a narrow provider interface.",
+          "scope": "2 files, +410/-22"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6222,
+          "title": "Add opt-in SQLite state pruning utility",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6222",
+          "merged_at": "2026-05-28T02:00:47Z",
+          "technical_point": "Adds an explicit pruning utility for SQLite state maintenance.",
+          "why_it_matters": "State databases need bounded maintenance paths that are opt-in and testable rather than hidden cleanup.",
+          "scope": "3 files, +449/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6216,
+          "title": "feat: add state diff API",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6216",
+          "merged_at": "2026-05-28T02:01:34Z",
+          "technical_point": "Adds an API for comparing and reporting state differences.",
+          "why_it_matters": "Diff visibility makes chain state debugging and sync verification more concrete.",
+          "scope": "2 files, +362/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6183,
+          "title": "feat: add lightweight SPV client helpers",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6183",
+          "merged_at": "2026-05-28T02:17:35Z",
+          "technical_point": "Adds lightweight SPV client helper primitives.",
+          "why_it_matters": "Client-side verification needs small, reusable helpers rather than forcing every consumer through full-node paths.",
+          "scope": "2 files, +292/-0"
+        }
+      ]
+    },
+    {
+      "name": "Explorer, bridge, identity, and user-facing observability",
+      "summary": "Merged work that exposes chain state, bridge history, agent metadata, and dashboards through clearer user-visible surfaces.",
+      "items": [
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6824,
+          "title": "feat: add explorer block filters",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6824",
+          "merged_at": "2026-06-03T14:36:48Z",
+          "technical_point": "Adds explorer filters for proposer/miner, time range, transaction counts, and gas usage.",
+          "why_it_matters": "Explorer users need precise filtering to inspect chain behavior instead of scanning raw block lists.",
+          "scope": "4 files, +452/-16"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6820,
+          "title": "fix: resolve Sophia Beacon Atlas profile",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6820",
+          "merged_at": "2026-06-03T18:38:32Z",
+          "technical_point": "Adds a public redacted Beacon Atlas profile endpoint and resolves Sophia through current and legacy IDs.",
+          "why_it_matters": "Agent metadata links must live-resolve; stale discovery endpoints are high-signal user trust failures.",
+          "scope": "2 files, +247/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6212,
+          "title": "fix: use live hall of fame endpoints",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6212",
+          "merged_at": "2026-06-03T03:48:36Z",
+          "technical_point": "Moves Hall of Fame behavior onto live endpoint paths.",
+          "why_it_matters": "Public leaderboards and proof pages need to reflect live system state, not stale or demo routes.",
+          "scope": "3 files, +25/-2"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6178,
+          "title": "[FEAT] Add mempool visualization to explorer dashboard",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6178",
+          "merged_at": "2026-06-03T03:48:45Z",
+          "technical_point": "Adds mempool visualization to the explorer dashboard.",
+          "why_it_matters": "Mempool visibility helps operators and users understand pending transaction pressure and ordering.",
+          "scope": "6 files, +268/-3"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6174,
+          "title": "feat: add bridge dashboard history metrics",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6174",
+          "merged_at": "2026-05-28T02:18:21Z",
+          "technical_point": "Adds bridge dashboard history metrics.",
+          "why_it_matters": "Bridge flows are trust boundaries; history metrics make transfer status and operator behavior easier to audit.",
+          "scope": "3 files, +221/-1"
+        }
+      ]
+    },
+    {
+      "name": "Network, P2P, and node operations",
+      "summary": "Merged work that hardens peer negotiation, node observability, NAT operation, and propagation memory.",
+      "items": [
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6172,
+          "title": "fix: bound block propagation seen cache",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6172",
+          "merged_at": "2026-05-28T02:18:34Z",
+          "technical_point": "Bounds the seen-cache used for block propagation.",
+          "why_it_matters": "Unbounded propagation memory can become an operational reliability issue on long-running nodes.",
+          "scope": "1 file, +107/-35"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6171,
+          "title": "fix: add UPnP peer announcement for NAT nodes",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6171",
+          "merged_at": "2026-05-28T02:18:40Z",
+          "technical_point": "Adds UPnP peer announcement support for nodes behind NAT.",
+          "why_it_matters": "Peer discovery and reachability matter for decentralized network participation.",
+          "scope": "3 files, +218/-3"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 5524,
+          "title": "Add TLS-valid P2P Prometheus metrics",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/5524",
+          "merged_at": "2026-05-18T14:45:53Z",
+          "technical_point": "Adds Prometheus scraping for P2P node health, peer count, attestations, epochs, and scrape freshness.",
+          "why_it_matters": "P2P health needs TLS-valid operational metrics so node issues can be detected outside the node process.",
+          "scope": "3 files, +225/-5"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 5517,
+          "title": "fix: negotiate P2P handshake parameters",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/5517",
+          "merged_at": "2026-05-18T16:00:24Z",
+          "technical_point": "Negotiates compatible protocol version, k-bucket size, ping interval, and timeout on peer handshakes.",
+          "why_it_matters": "Peers with slightly different settings need compatibility negotiation instead of brittle connection failures.",
+          "scope": "2 files, +333/-3"
+        }
+      ]
+    },
+    {
+      "name": "Runtime, CI, and public API hardening",
+      "summary": "Merged work that reduces public abuse surface, import-time failures, and raw internal error exposure.",
+      "items": [
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6838,
+          "title": "fix: rate limit core RPC API",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6838",
+          "merged_at": "2026-06-05T00:22:52Z",
+          "technical_point": "Adds a thread-safe sliding-window limiter before GET routing and POST body parsing.",
+          "why_it_matters": "Public RPC endpoints need request pressure controls before expensive parsing or route execution.",
+          "scope": "3 files, +309/-3"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6818,
+          "title": "fix: keep GPU fingerprint import safe on CPU CI",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6818",
+          "merged_at": "2026-06-03T14:22:07Z",
+          "technical_point": "Defers PyTorch/CUDA checks until GPU fingerprinting actually runs.",
+          "why_it_matters": "CPU-only CI should be able to import modules and run unrelated tests without GPU dependency failures.",
+          "scope": "2 files, +67/-18"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 5513,
+          "title": "fix: redact agent economy internal errors",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/5513",
+          "merged_at": "2026-05-18T14:44:07Z",
+          "technical_point": "Replaces raw exception responses in Agent Economy write routes with generic 500 payloads while logging server details.",
+          "why_it_matters": "Public write endpoints should not leak internal exception data to clients.",
+          "scope": "2 files, +86/-8"
+        }
+      ]
+    },
+    {
+      "name": "Documentation, localization, and contributor path quality",
+      "summary": "Merged work that removes stale links, broken relative paths, and contributor onboarding drift.",
+      "items": [
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6858,
+          "title": "docs: fix Dutch README contributing link",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6858",
+          "merged_at": "2026-06-05T02:57:21Z",
+          "technical_point": "Fixes the Dutch README contribution link so it resolves back to the root contribution guide.",
+          "why_it_matters": "Localized docs must preserve contributor paths or new contributors get routed into dead links.",
+          "scope": "1 file, +1/-1"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6821,
+          "title": "docs: fix installation walkthrough recording link",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6821",
+          "merged_at": "2026-06-03T14:36:54Z",
+          "technical_point": "Points the installation walkthrough to the checked-in asciinema recording instead of a missing generated GIF.",
+          "why_it_matters": "Install docs should link to artifacts that exist in the repo and can be reviewed.",
+          "scope": "1 file, +5/-5"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6795,
+          "title": "docs: add README language index",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6795",
+          "merged_at": "2026-06-02T17:54:27Z",
+          "technical_point": "Adds a compact language index for README translations.",
+          "why_it_matters": "A language index makes translated entry points discoverable without burying them in prose.",
+          "scope": "1 file, +1/-1"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6714,
+          "title": "docs: fix Chinese mining guide relative links",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6714",
+          "merged_at": "2026-06-02T21:05:55Z",
+          "technical_point": "Fixes broken relative links in the Chinese mining guide.",
+          "why_it_matters": "Mining onboarding docs need working navigation for non-English contributors and operators.",
+          "scope": "1 file, +2/-2"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6713,
+          "title": "Fix zh-CN API reference links",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6713",
+          "merged_at": "2026-06-02T21:05:49Z",
+          "technical_point": "Fixes repository-relative links in the Chinese API reference.",
+          "why_it_matters": "API docs lose trust quickly when translated references point to the wrong path.",
+          "scope": "1 file, +2/-2"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6681,
+          "title": "docs: fix installation walkthrough checkout path",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6681",
+          "merged_at": "2026-06-03T03:48:49Z",
+          "technical_point": "Corrects a stale repository checkout path in the installation walkthrough recording command.",
+          "why_it_matters": "Install commands must match the actual repository or first-run setup fails immediately.",
+          "scope": "1 file, +1/-1"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6663,
+          "title": "docs: link AI contribution policy",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6663",
+          "merged_at": "2026-06-03T03:48:54Z",
+          "technical_point": "Links the AI contribution onboarding policy from CONTRIBUTING.md.",
+          "why_it_matters": "AI-assisted contributors need visible repo-specific rules before opening PRs.",
+          "scope": "1 file, +4/-0"
+        },
+        {
+          "repo": "Scottcjn/Rustchain",
+          "number": 6169,
+          "title": "fix: remove BOM from Postman collection",
+          "url": "https://github.com/Scottcjn/Rustchain/pull/6169",
+          "merged_at": "2026-05-28T02:18:47Z",
+          "technical_point": "Removes a leading UTF-8 BOM from the Postman collection JSON.",
+          "why_it_matters": "Strict JSON tooling can fail before parsing if the collection starts with a BOM byte sequence.",
+          "scope": "1 file, +1/-1"
+        }
+      ]
+    },
+    {
+      "name": "External transferable proof",
+      "summary": "Merged work outside RustChain showing that the same framework can transfer when a target repo has real review activity.",
+      "items": [
+        {
+          "repo": "mgzwarrior/mgz-pkmn",
+          "number": 217,
+          "title": "test: cover CLI price and dedupe helpers",
+          "url": "https://github.com/mgzwarrior/mgz-pkmn/pull/217",
+          "merged_at": "2026-05-17T03:40:58Z",
+          "technical_point": "Adds direct helper tests for price formatting and row deduplication behavior.",
+          "why_it_matters": "Shows the Druid loop can produce maintainer-approved, focused test coverage outside RustChain.",
+          "scope": "1 file, +59/-10"
+        }
+      ]
+    }
+  ]
+}

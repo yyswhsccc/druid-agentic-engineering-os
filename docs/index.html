@@ -22,6 +22,7 @@
         <a href="druid.html">System</a>
         <a href="week.html">This Week</a>
         <a href="evidence.html">Evidence</a>
+        <a href="token.html">Token Budget</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -173,6 +174,33 @@
               <p>Tracks CI, review comments, requested changes, superseding PRs, dirty branches, stale work, and whether a maintenance note helps or just adds noise.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Token-budget discipline</h2>
+        <p class="section-intro">Druid is designed to spend expensive reasoning on high-value engineering decisions, not on endless status checking. Routine maintenance is pushed toward GitHub API queries, JSON ledgers, dedupe gates, and stop-loss rules.</p>
+        <div class="grid-3">
+          <article class="proof-card">
+            <p class="kicker">Spend tokens here</p>
+            <h3>Selection, patches, tests</h3>
+            <p>Use model calls when the output is a real PR decision, bounded code change, regression test, or nuanced reviewer reply.</p>
+          </article>
+          <article class="proof-card">
+            <p class="kicker">Do not spend them here</p>
+            <h3>Repeated low-signal polling</h3>
+            <p>Quota probes, broad workspace scans, zombie PR loops, and duplicate maintenance drafts get pruned or downgraded.</p>
+          </article>
+          <article class="proof-card">
+            <p class="kicker">Evidence</p>
+            <h3>Small high-signal PRs</h3>
+            <p>The current RustChain queue averages 3.03 changed files per PR, showing compact work slices instead of giant token-heavy rewrites.</p>
+          </article>
+        </div>
+        <div class="hero-actions">
+          <a class="button" href="token.html">Open token budget audit</a>
         </div>
       </div>
     </section>

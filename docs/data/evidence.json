@@ -3,6 +3,7 @@
   "claims": {
     "merged_prs_overall": 47,
     "rustchain_merged_prs": 45,
+    "merged_public_proof_items": 46,
     "rustchain_open_prs": 36,
     "rustchain_clean_new_queue": 34,
     "outside_rustchain_selected_merged_prs": 1

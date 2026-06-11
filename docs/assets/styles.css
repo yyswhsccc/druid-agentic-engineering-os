@@ -1,8 +1,8 @@
 :root {
   color-scheme: light;
-  --font-display: "Styrene A", "Styrene B", "Anthropic Sans", "Helvetica Neue", Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-sans: "Styrene B", "Anthropic Sans", "Helvetica Neue", Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-body: "Tiempos Text", "Tiempos", "Iowan Old Style", Georgia, Cambria, "Times New Roman", serif;
+  --font-display: "Times New Roman", "Tiempos Headline", "Tiempos Text", "Iowan Old Style", Georgia, Cambria, serif;
+  --font-sans: "Times New Roman", "Tiempos Text", "Iowan Old Style", Georgia, Cambria, serif;
+  --font-body: "Times New Roman", "Tiempos Text", "Iowan Old Style", Georgia, Cambria, serif;
   --bg: #f7f1e8;
   --bg-soft: #eee2d4;
   --panel: #fffaf2;
@@ -536,13 +536,111 @@ td strong {
   font-size: 0.92rem;
 }
 
+.audit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.audit-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 242, 0.88);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 28px rgba(72, 49, 35, 0.07);
+}
+
+.audit-card .number {
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.audit-card .label {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.evidence-group {
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 242, 0.86);
+  border-radius: 20px;
+  margin: 14px 0;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(72, 49, 35, 0.06);
+}
+
+.evidence-group summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.evidence-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.evidence-group summary h3 {
+  display: inline;
+  margin: 0;
+}
+
+.evidence-group summary span {
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.merged-list {
+  display: grid;
+  gap: 0;
+}
+
+.merged-item {
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(216, 200, 184, 0.72);
+}
+
+.merged-item:last-child {
+  border-bottom: 0;
+}
+
+.merged-item h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.merged-item p {
+  margin: 0 0 8px;
+  color: var(--muted);
+}
+
+.merged-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.merged-meta span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--faint);
+  padding: 5px 9px;
+  font-size: 0.86rem;
+}
+
 @media (max-width: 860px) {
   .nav-inner,
   .hero-grid,
   .grid-2,
   .grid-3,
   .split,
-  .surface-grid {
+  .surface-grid,
+  .audit-grid {
     grid-template-columns: 1fr;
   }
 
