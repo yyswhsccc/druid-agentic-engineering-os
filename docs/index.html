@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Druid: Agentic Engineering OS | Yongshan Yu</title>
+  <meta name="description" content="Druid is Yongshan Yu's agentic engineering operating system for repo risk discovery, test-backed PR generation, review tracking, and adaptive memory.">
+  <meta property="og:title" content="Druid: Agentic Engineering OS">
+  <meta property="og:description" content="Low-touch agents for repo risk discovery, PR maintenance, and review-loop automation.">
+  <meta property="og:image" content="assets/druid-social-preview.svg">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="brand" href="index.html" aria-label="Druid home">
+        <strong>Druid</strong>
+        <span>Agentic Engineering OS</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="druid.html">System</a>
+        <a href="week.html">This Week</a>
+        <a href="evidence.html">Evidence</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-panel">
+          <div class="hero-content">
+            <span class="eyebrow">Built by Yongshan Yu</span>
+            <h1>Druid: Agentic Engineering OS</h1>
+            <p class="lead">I build frameworks that make AI coding tools operate reliably inside real repositories.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="druid.html">Explore the system</a>
+              <a class="button" href="evidence.html">View public evidence</a>
+              <a class="button" href="contact.html">Hiring / collaboration</a>
+            </div>
+          </div>
+        </div>
+        <aside class="metric-stack" aria-label="Druid proof metrics">
+          <div class="metric-card accent">
+            <span class="number">36</span>
+            <span class="label">RustChain PR review queue, test-backed and grouped by risk surface.</span>
+          </div>
+          <div class="metric-card">
+            <span class="number">45</span>
+            <span class="label">Merged RustChain PRs from public GitHub evidence.</span>
+          </div>
+          <div class="metric-card">
+            <span class="number">7</span>
+            <span class="label">Core surfaces: payout, bridge, UTXO, governance, bounty, browser/security, reliability.</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>The product is the framework</h2>
+        <p class="section-intro">Druid is not the product I want to be hired to manually operate. Druid is proof that I can design agentic engineering systems that keep discovering, prioritizing, implementing, testing, reviewing, and learning with low ongoing supervision once the framework is built.</p>
+        <div class="grid-3">
+          <article class="proof-card">
+            <h3>Agent framework builder</h3>
+            <p>Connects repositories, issues, CI, tests, review rules, risk policy, and adaptive memory into one operating loop.</p>
+          </article>
+          <article class="proof-card">
+            <h3>Security automation builder</h3>
+            <p>Finds vulnerability-shaped engineering risks: auth boundaries, public exposure, XSS/CORS, races, exact-once payout failures, and ledger drift.</p>
+          </article>
+          <article class="proof-card">
+            <h3>Developer productivity architect</h3>
+            <p>Turns one-off prompting into a repeatable, auditable system for repo maintenance and review-loop execution.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Operating loop</h2>
+        <p class="section-intro">Druid is a closed loop, not a single bot. Every merged, closed, superseded, dirty, stale, or rewarded PR becomes a strategy signal.</p>
+        <div class="panel diagram">
+          <img src="assets/druid-loop.svg" alt="Druid agentic engineering loop">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>RustChain review queue</h2>
+        <p class="section-intro">Druid generated a 36-PR test-backed review queue across payout exact-once semantics, bridge terminal-state integrity, UTXO transaction atomicity, governance accounting, bounty attribution, browser/security boundaries, and operational reliability hardening.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Surface</th>
+                <th>Representative PRs</th>
+                <th>Proof value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Payout exact-once / terminal status</strong></td>
+                <td><a href="https://github.com/Scottcjn/Rustchain/pull/7385">#7385</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7357">#7357</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7353">#7353</a></td>
+                <td>Missing-row handling, terminal-status protection, and repeated-claim prevention.</td>
+              </tr>
+              <tr>
+                <td><strong>Bridge terminal integrity</strong></td>
+                <td><a href="https://github.com/Scottcjn/Rustchain/pull/7363">#7363</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7343">#7343</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7316">#7316</a></td>
+                <td>Bridge state visibility, terminal race protection, and operator-only flow clarity.</td>
+              </tr>
+              <tr>
+                <td><strong>UTXO / transaction atomicity</strong></td>
+                <td><a href="https://github.com/Scottcjn/Rustchain/pull/7350">#7350</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7339">#7339</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7335">#7335</a></td>
+                <td>Nonce serialization, ownership invariants, conservation checks, and rollback edges.</td>
+              </tr>
+              <tr>
+                <td><strong>Browser/security boundaries</strong></td>
+                <td><a href="https://github.com/Scottcjn/Rustchain/pull/7382">#7382</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7379">#7379</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7377">#7377</a></td>
+                <td>Legacy admin gates, dashboard escaping, Socket.IO CORS, and public status redaction.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="notice">Open PRs are review-queue evidence, not merged or accepted claims. Counts should be re-audited before public launches.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <p>Built by Yongshan Yu. <a href="https://github.com/yyswhsccc">GitHub</a> / <a href="https://www.linkedin.com/in/yongshan-yu-195771319/">LinkedIn</a> / <a href="mailto:yuyongshan573@gmail.com">Email</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Druid System | Agentic Engineering OS</title>
+  <meta name="description" content="Druid system architecture, operating loop, risk control, adaptive memory, and stop-loss design.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="brand" href="index.html"><strong>Druid</strong><span>Agentic Engineering OS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="druid.html">System</a>
+        <a href="week.html">This Week</a>
+        <a href="evidence.html">Evidence</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="shell">
+        <span class="eyebrow">Featured system</span>
+        <h2>Druid turns AI coding into an operating system</h2>
+        <p class="section-intro">The strongest signal is not that Druid found bugs. The strongest signal is that Yongshan built the architecture that lets Druid keep finding, validating, maintaining, and learning from engineering work autonomously inside defined strategy and human-supervision boundaries.</p>
+        <div class="panel diagram">
+          <img src="assets/druid-loop.svg" alt="Druid architecture loop">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell grid-2">
+        <article class="proof-card">
+          <h3>Scanner</h3>
+          <p>Discovers repositories, issues, bounties, open review surfaces, recent maintainer activity, collision risk, and reward/merge signals.</p>
+        </article>
+        <article class="proof-card">
+          <h3>Decision engine</h3>
+          <p>Ranks tasks by value, risk, testability, review friction, bounty fit, and maintenance cost. It can stop work when a PR becomes stale or low expected value.</p>
+        </article>
+        <article class="proof-card">
+          <h3>Patch and test generator</h3>
+          <p>Builds small patches with direct regression coverage. For money/security paths, it prefers PoC-to-fix over broad refactors.</p>
+        </article>
+        <article class="proof-card">
+          <h3>Review loop</h3>
+          <p>Tracks CI, maintainer comments, labels, requested changes, merge/close state, and whether a maintenance note is useful or just noise.</p>
+        </article>
+        <article class="proof-card">
+          <h3>Adaptive memory</h3>
+          <p>Learns from merged, closed, superseded, credited, dirty, and zombie PRs. Strategy changes become reusable operating rules.</p>
+        </article>
+        <article class="proof-card">
+          <h3>Human gates</h3>
+          <p>Designed for low touch after setup, not zero oversight. High-risk decisions, policy shifts, and final approvals remain human-in-the-loop.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>What companies can reuse</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Internal need</th><th>Druid-shaped system</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Security triage</strong></td><td>Agents that scan auth, public data exposure, callback, XSS/CORS, state-changing endpoint, and idempotency boundaries.</td></tr>
+              <tr><td><strong>Developer productivity</strong></td><td>Agents that turn recurring repo maintenance into patches, tests, PRs, and review summaries.</td></tr>
+              <tr><td><strong>Platform reliability</strong></td><td>Agents that find malformed env defaults, limit handling, payload compatibility, and operational footguns.</td></tr>
+              <tr><td><strong>Engineering management</strong></td><td>Evidence dashboards that show work state, proof value, review risk, and stop-loss decisions.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell"><p><a href="index.html">Druid</a> / Built by Yongshan Yu</p></div></footer>
+</body>
+</html>
+

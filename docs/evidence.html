@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evidence Board | Druid</title>
+  <meta name="description" content="Public GitHub evidence for Druid: merged PRs, open review queue, and selected proof values.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="brand" href="index.html"><strong>Druid</strong><span>Agentic Engineering OS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="druid.html">System</a>
+        <a href="week.html">This Week</a>
+        <a class="active" href="evidence.html">Evidence</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="shell">
+        <span class="eyebrow">Public proof</span>
+        <h2>Evidence board</h2>
+        <p class="section-intro">All counts below came from live GitHub queries on 2026-06-11. Open PRs are review-queue evidence, not accepted, merged, or rewarded claims.</p>
+        <div class="grid-3">
+          <article class="metric-card accent"><span class="number">45</span><span class="label">Merged RustChain PRs.</span></article>
+          <article class="metric-card accent"><span class="number">36</span><span class="label">Open RustChain review queue.</span></article>
+          <article class="metric-card"><span class="number">1</span><span class="label">Selected merged PR outside RustChain.</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Merged work</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>PR</th><th>Proof value</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6219">RustChain #6219</a></td><td>Signed-transfer nonce ordering with replay-focused tests; money-path correctness.</td></tr>
+              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6673">RustChain #6673</a></td><td>Deterministic pending transaction ordering; queue/state reasoning.</td></tr>
+              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6188">RustChain #6188</a></td><td>Block-save atomicity around template production; concurrency and state integrity.</td></tr>
+              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6666">RustChain #6666</a></td><td>Data custody proof checks; protocol-surface implementation.</td></tr>
+              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6667">RustChain #6667</a> / <a href="https://github.com/Scottcjn/Rustchain/pull/6674">#6674</a></td><td>Slasher evidence and slashing penalty core; validator/security economics surface.</td></tr>
+              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6838">RustChain #6838</a></td><td>Core RPC API rate limiting; public API hardening.</td></tr>
+              <tr><td><a href="https://github.com/Scottcjn/Rustchain/pull/6825">RustChain #6825</a></td><td>Event faucet claim codes; reward/claim workflow implementation.</td></tr>
+              <tr><td><a href="https://github.com/mgzwarrior/mgz-pkmn/pull/217">mgz-pkmn #217</a></td><td>Maintainer-approved CLI helper tests; transfer beyond RustChain.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Open high-signal review queue</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Surface</th><th>Representative PRs</th><th>Proof value</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Payout exact-once / terminal status</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7385">#7385</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7357">#7357</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7353">#7353</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7378">#7378</a></td><td>Missing status handling, terminal-status protection, repeated-claim prevention, decimal precision boundaries.</td></tr>
+              <tr><td><strong>Bridge terminal integrity</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7363">#7363</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7343">#7343</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7330">#7330</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7316">#7316</a></td><td>State timestamps, terminal race protection, malformed config handling, operator-only documentation clarity.</td></tr>
+              <tr><td><strong>UTXO / transaction atomicity</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7350">#7350</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7339">#7339</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7335">#7335</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7333">#7333</a></td><td>Nonce serialization, ownership invariants, conservation checks, rollback edges.</td></tr>
+              <tr><td><strong>Governance accounting</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7347">#7347</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7345">#7345</a></td><td>Pagination and proposal-fee accounting paths that could otherwise drift silently.</td></tr>
+              <tr><td><strong>Bounty attribution / claims</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7367">#7367</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7361">#7361</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7359">#7359</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7383">#7383</a></td><td>Claim completion, persistence, missing status rows, and honest reward/receipt messaging.</td></tr>
+              <tr><td><strong>Browser/security boundaries</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7382">#7382</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7379">#7379</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7377">#7377</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7341">#7341</a></td><td>Legacy admin gates, dashboard escaping, Socket.IO CORS, and public lock-status redaction.</td></tr>
+              <tr><td><strong>Operational reliability</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7380">#7380</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7376">#7376</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7328">#7328</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7322">#7322</a></td><td>Malformed numeric env defaults, limit floors, payload compatibility, and service hardening.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Machine-readable evidence</h2>
+        <p class="section-intro">The raw queue snapshot is stored as JSON so the board can later be refreshed by a GitHub Action or local Druid audit task.</p>
+        <a class="button" href="data/evidence.json">Open evidence.json</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell"><p>Evidence audit timestamp: 2026-06-11.</p></div></footer>
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+{
+  "last_audited": "2026-06-11",
+  "claims": {
+    "rustchain_merged_prs": 45,
+    "rustchain_open_prs": 36,
+    "rustchain_clean_new_queue": 34,
+    "outside_rustchain_selected_merged_prs": 1
+  },
+  "open_rustchain_review_queue": [
+    {"number": 7385, "title": "fix(payout): return 404 for missing status records", "url": "https://github.com/Scottcjn/Rustchain/pull/7385", "surface": "Payout exact-once / terminal status"},
+    {"number": 7383, "title": "fix(faucet): report keeper claims as receipts", "url": "https://github.com/Scottcjn/Rustchain/pull/7383", "surface": "Bounty attribution / claims"},
+    {"number": 7382, "title": "fix(gpu): gate legacy protocol escrow routes", "url": "https://github.com/Scottcjn/Rustchain/pull/7382", "surface": "Browser/security boundaries"},
+    {"number": 7380, "title": "fix(poa): tolerate malformed numeric env defaults", "url": "https://github.com/Scottcjn/Rustchain/pull/7380", "surface": "Operational reliability"},
+    {"number": 7379, "title": "fix(status): escape dashboard status fields", "url": "https://github.com/Scottcjn/Rustchain/pull/7379", "surface": "Browser/security boundaries"},
+    {"number": 7378, "title": "fix(tip-bot): validate decimal precision before float rounding", "url": "https://github.com/Scottcjn/Rustchain/pull/7378", "surface": "Payout exact-once / terminal status"},
+    {"number": 7377, "title": "fix(explorer): restrict Socket.IO CORS origins", "url": "https://github.com/Scottcjn/Rustchain/pull/7377", "surface": "Browser/security boundaries"},
+    {"number": 7376, "title": "fix(rate-limit): tolerate malformed env defaults", "url": "https://github.com/Scottcjn/Rustchain/pull/7376", "surface": "Operational reliability"},
+    {"number": 7367, "title": "fix(claims): return false for missing status rows", "url": "https://github.com/Scottcjn/Rustchain/pull/7367", "surface": "Bounty attribution / claims"},
+    {"number": 7365, "title": "fix(lock): floor helper query limits", "url": "https://github.com/Scottcjn/Rustchain/pull/7365", "surface": "Operational reliability"},
+    {"number": 7363, "title": "fix(bridge): report last state change time", "url": "https://github.com/Scottcjn/Rustchain/pull/7363", "surface": "Bridge terminal integrity"},
+    {"number": 7361, "title": "fix(beacon): require claimed bounty completion", "url": "https://github.com/Scottcjn/Rustchain/pull/7361", "surface": "Bounty attribution / claims"},
+    {"number": 7359, "title": "fix(beacon): persist bounty claims", "url": "https://github.com/Scottcjn/Rustchain/pull/7359", "surface": "Bounty attribution / claims"},
+    {"number": 7357, "title": "fix(payout): guard ledger terminal statuses", "url": "https://github.com/Scottcjn/Rustchain/pull/7357", "surface": "Payout exact-once / terminal status"},
+    {"number": 7355, "title": "fix(withdraw): use remaining balance for gauge", "url": "https://github.com/Scottcjn/Rustchain/pull/7355", "surface": "Payout exact-once / terminal status"},
+    {"number": 7353, "title": "fix(payout): claim pending withdrawals once", "url": "https://github.com/Scottcjn/Rustchain/pull/7353", "surface": "Payout exact-once / terminal status"},
+    {"number": 7350, "title": "fix(tx): serialize pending nonce admission", "url": "https://github.com/Scottcjn/Rustchain/pull/7350", "surface": "UTXO / transaction atomicity"},
+    {"number": 7347, "title": "fix(governance): paginate api proposal votes", "url": "https://github.com/Scottcjn/Rustchain/pull/7347", "surface": "Governance accounting"},
+    {"number": 7345, "title": "fix(governance): avoid charging rejected proposals", "url": "https://github.com/Scottcjn/Rustchain/pull/7345", "surface": "Governance accounting"},
+    {"number": 7343, "title": "fix(bridge): guard void against terminal races", "url": "https://github.com/Scottcjn/Rustchain/pull/7343", "surface": "Bridge terminal integrity"},
+    {"number": 7341, "title": "fix(airdrop): redact public bridge lock status", "url": "https://github.com/Scottcjn/Rustchain/pull/7341", "surface": "Browser/security boundaries"},
+    {"number": 7339, "title": "fix(utxo): keep apply transaction ownership flag single-sourced", "url": "https://github.com/Scottcjn/Rustchain/pull/7339", "surface": "UTXO / transaction atomicity"},
+    {"number": 7337, "title": "fix(utxo): expose absorbed coin selection fee", "url": "https://github.com/Scottcjn/Rustchain/pull/7337", "surface": "UTXO / transaction atomicity"},
+    {"number": 7336, "title": "fix(utxo): bound box id output index encoding", "url": "https://github.com/Scottcjn/Rustchain/pull/7336", "surface": "UTXO / transaction atomicity"},
+    {"number": 7335, "title": "fix(utxo): align mempool value sum with unspent inputs", "url": "https://github.com/Scottcjn/Rustchain/pull/7335", "surface": "UTXO / transaction atomicity"},
+    {"number": 7334, "title": "fix(utxo): preserve external transaction ownership", "url": "https://github.com/Scottcjn/Rustchain/pull/7334", "surface": "UTXO / transaction atomicity"},
+    {"number": 7333, "title": "fix(utxo): roll back invalid mempool timestamps", "url": "https://github.com/Scottcjn/Rustchain/pull/7333", "surface": "UTXO / transaction atomicity"},
+    {"number": 7330, "title": "fix(bridge): tolerate malformed config env", "url": "https://github.com/Scottcjn/Rustchain/pull/7330", "surface": "Bridge terminal integrity"},
+    {"number": 7328, "title": "fix(settlement): tolerate malformed epoch settler env", "url": "https://github.com/Scottcjn/Rustchain/pull/7328", "surface": "Operational reliability"},
+    {"number": 7326, "title": "fix(webhooks): tolerate malformed numeric env", "url": "https://github.com/Scottcjn/Rustchain/pull/7326", "surface": "Operational reliability"},
+    {"number": 7324, "title": "fix(alerts): tolerate malformed numeric env", "url": "https://github.com/Scottcjn/Rustchain/pull/7324", "surface": "Operational reliability"},
+    {"number": 7322, "title": "fix(prometheus): tolerate malformed numeric env", "url": "https://github.com/Scottcjn/Rustchain/pull/7322", "surface": "Operational reliability"},
+    {"number": 7320, "title": "fix(discord): unwrap paginated miners payload", "url": "https://github.com/Scottcjn/Rustchain/pull/7320", "surface": "Operational reliability"},
+    {"number": 7316, "title": "docs(bridge): clarify operator-only bridge initiate flow", "url": "https://github.com/Scottcjn/Rustchain/pull/7316", "surface": "Bridge terminal integrity"},
+    {"number": 6823, "title": "feat: record miner header key rotations", "url": "https://github.com/Scottcjn/Rustchain/pull/6823", "surface": "Older low-touch maintenance"},
+    {"number": 6182, "title": "fix: serialize pending tx nonce admission", "url": "https://github.com/Scottcjn/Rustchain/pull/6182", "surface": "Older low-touch maintenance"}
+  ]
+}
+

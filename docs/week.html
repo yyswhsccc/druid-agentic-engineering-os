@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>This Week | Druid Command Log</title>
+  <meta name="description" content="Recent Druid weekly command log and review queue summary.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="brand" href="index.html"><strong>Druid</strong><span>Agentic Engineering OS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="druid.html">System</a>
+        <a class="active" href="week.html">This Week</a>
+        <a href="evidence.html">Evidence</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="shell">
+        <span class="eyebrow">Command log</span>
+        <h2>This week Druid built a high-signal RustChain review queue</h2>
+        <p class="section-intro">This page is the living weekly dashboard. It shows what the framework did recently, without reducing the story to raw PR volume.</p>
+        <div class="grid-3">
+          <article class="metric-card accent"><span class="number">36</span><span class="label">Open RustChain PRs in the current review queue.</span></article>
+          <article class="metric-card"><span class="number">34</span><span class="label">Clean new PRs opened on 2026-06-11.</span></article>
+          <article class="metric-card"><span class="number">2</span><span class="label">Older low-touch maintenance PRs kept out of the main effort budget.</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>What changed</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <time>2026-06-11</time>
+            <p>Druid focused RustChain as the primary bounty target and stopped treating broad repo exploration as the default path.</p>
+          </div>
+          <div class="timeline-item">
+            <time>2026-06-11</time>
+            <p>It generated a 36-PR test-backed review queue across payout, bridge, UTXO, governance, bounty, browser/security, and reliability surfaces.</p>
+          </div>
+          <div class="timeline-item">
+            <time>2026-06-11</time>
+            <p>It separated high-value new work from older zombie-risk PRs, keeping maintenance cost low instead of burning attention on stale branches.</p>
+          </div>
+          <div class="timeline-item">
+            <time>Ongoing</time>
+            <p>The queue is tracked as review evidence. Merge, close, supersede, reward, and maintainer feedback signals should feed back into strategy memory.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Why this matters</h2>
+        <p class="section-intro">The value is not raw PR count. The value is that Druid scanned a complex codebase, found real engineering risk surfaces, split them into small reviewable patches, attached tests and risk boundaries, and kept them in an auditable review queue.</p>
+        <div class="tag-list">
+          <span class="tag">payout exact-once</span>
+          <span class="tag">bridge terminal states</span>
+          <span class="tag">UTXO atomicity</span>
+          <span class="tag">governance accounting</span>
+          <span class="tag">bounty attribution</span>
+          <span class="tag">browser security</span>
+          <span class="tag">operational reliability</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell"><p><a href="evidence.html">View the evidence board</a></p></div></footer>
+</body>
+</html>
+
