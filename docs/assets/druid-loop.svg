@@ -2,66 +2,65 @@
   <title id="title">Druid agentic engineering loop</title>
   <desc id="desc">Issue scanner, risk classifier, decision engine, runtime, PR generator, CI tracker, adaptive memory, and strategy update loop.</desc>
   <defs>
-    <linearGradient id="node" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#142535"/>
-      <stop offset="1" stop-color="#0b151e"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf3"/>
+      <stop offset="1" stop-color="#f4eadf"/>
     </linearGradient>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0 0l10 5-10 5z" fill="#5ee7ff"/>
+      <path d="M0 0l10 5-10 5z" fill="#c86f55"/>
     </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#6b4a36" flood-opacity="0.10"/>
+    </filter>
   </defs>
-  <rect width="1120" height="520" rx="20" fill="#071016"/>
-  <g stroke="#223446" opacity="0.55">
-    <path d="M60 86h1000M60 178h1000M60 270h1000M60 362h1000M60 454h1000"/>
-    <path d="M120 42v436M260 42v436M400 42v436M540 42v436M680 42v436M820 42v436M960 42v436"/>
-  </g>
-  <g font-family="Inter, Arial, sans-serif" font-size="18" font-weight="760" fill="#edf7ff">
-    <g transform="translate(50 80)">
-      <rect width="210" height="70" rx="12" fill="url(#node)" stroke="#31506a"/>
-      <text x="24" y="30">Issue / Bounty</text><text x="24" y="54">Scanner</text>
+  <rect width="1120" height="520" rx="28" fill="#faf6ef"/>
+  <path d="M0 424 C176 376 270 450 438 398 C652 334 764 178 948 232 C1032 256 1072 302 1120 314 L1120 520 L0 520 Z" fill="#eadbc9" opacity="0.7"/>
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="760" fill="#2f2a24" filter="url(#shadow)">
+    <g transform="translate(48 78)">
+      <rect width="214" height="74" rx="18" fill="url(#paper)" stroke="#ded1c3"/>
+      <text x="24" y="31">Issue / Bounty</text><text x="24" y="56">Scanner</text>
     </g>
-    <g transform="translate(320 80)">
-      <rect width="210" height="70" rx="12" fill="url(#node)" stroke="#31506a"/>
-      <text x="24" y="30">Risk &amp; Value</text><text x="24" y="54">Classifier</text>
+    <g transform="translate(316 78)">
+      <rect width="214" height="74" rx="18" fill="url(#paper)" stroke="#ded1c3"/>
+      <text x="24" y="31">Risk &amp; Value</text><text x="24" y="56">Classifier</text>
     </g>
-    <g transform="translate(590 80)">
-      <rect width="210" height="70" rx="12" fill="url(#node)" stroke="#31506a"/>
-      <text x="24" y="42">Decision Engine</text>
+    <g transform="translate(584 78)">
+      <rect width="214" height="74" rx="18" fill="url(#paper)" stroke="#ded1c3"/>
+      <text x="24" y="45">Decision Engine</text>
     </g>
-    <g transform="translate(860 80)">
-      <rect width="210" height="70" rx="12" fill="url(#node)" stroke="#31506a"/>
-      <text x="24" y="30">Druid Agent</text><text x="24" y="54">Runtime</text>
+    <g transform="translate(852 78)">
+      <rect width="214" height="74" rx="18" fill="url(#paper)" stroke="#ded1c3"/>
+      <text x="24" y="31">Druid Agent</text><text x="24" y="56">Runtime</text>
     </g>
-    <g transform="translate(860 250)">
-      <rect width="210" height="78" rx="12" fill="url(#node)" stroke="#31506a"/>
-      <text x="24" y="31">Patch / Test /</text><text x="24" y="57">PR Generator</text>
+    <g transform="translate(852 250)">
+      <rect width="214" height="82" rx="18" fill="url(#paper)" stroke="#ded1c3"/>
+      <text x="24" y="34">Patch / Test /</text><text x="24" y="61">PR Generator</text>
     </g>
-    <g transform="translate(590 250)">
-      <rect width="210" height="78" rx="12" fill="url(#node)" stroke="#31506a"/>
-      <text x="24" y="31">CI / Review</text><text x="24" y="57">Tracker</text>
+    <g transform="translate(584 250)">
+      <rect width="214" height="82" rx="18" fill="url(#paper)" stroke="#ded1c3"/>
+      <text x="24" y="34">CI / Review</text><text x="24" y="61">Tracker</text>
     </g>
-    <g transform="translate(320 250)">
-      <rect width="210" height="78" rx="12" fill="url(#node)" stroke="#31506a"/>
-      <text x="24" y="31">Adaptive</text><text x="24" y="57">Experience Base</text>
+    <g transform="translate(316 250)">
+      <rect width="214" height="82" rx="18" fill="url(#paper)" stroke="#ded1c3"/>
+      <text x="24" y="34">Adaptive</text><text x="24" y="61">Experience Base</text>
     </g>
-    <g transform="translate(50 250)">
-      <rect width="210" height="78" rx="12" fill="url(#node)" stroke="#31506a"/>
-      <text x="24" y="31">Strategy Update</text><text x="24" y="57">/ Stop-loss</text>
+    <g transform="translate(48 250)">
+      <rect width="214" height="82" rx="18" fill="url(#paper)" stroke="#ded1c3"/>
+      <text x="24" y="34">Strategy Update</text><text x="24" y="61">/ Stop-loss</text>
     </g>
   </g>
-  <g fill="none" stroke="#5ee7ff" stroke-width="3" marker-end="url(#arrow)">
-    <path d="M260 115h56"/>
-    <path d="M530 115h56"/>
-    <path d="M800 115h56"/>
-    <path d="M965 150v94"/>
-    <path d="M860 289h-56"/>
-    <path d="M590 289h-56"/>
-    <path d="M320 289h-56"/>
-    <path d="M155 250v-94"/>
+  <g fill="none" stroke="#c86f55" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M262 115h50"/>
+    <path d="M530 115h50"/>
+    <path d="M798 115h50"/>
+    <path d="M959 153v91"/>
+    <path d="M852 291h-50"/>
+    <path d="M584 291h-50"/>
+    <path d="M316 291h-50"/>
+    <path d="M155 250v-91"/>
   </g>
-  <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#a9bac9">
-    <text x="602" y="390">High-risk decisions remain human-gated.</text>
-    <text x="602" y="418">Merged, closed, superseded, rewarded, dirty, and stale work becomes memory.</text>
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" fill="#6f665c">
+    <text x="584" y="390">High-risk decisions remain human-gated.</text>
+    <text x="584" y="418">Merged, closed, superseded, rewarded, dirty, and stale work becomes memory.</text>
   </g>
 </svg>
-
