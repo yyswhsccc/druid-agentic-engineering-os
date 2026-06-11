@@ -1,6 +1,7 @@
 {
   "last_audited": "2026-06-11",
   "claims": {
+    "merged_prs_overall": 47,
     "rustchain_merged_prs": 45,
     "rustchain_open_prs": 36,
     "rustchain_clean_new_queue": 34,
@@ -45,4 +46,3 @@
     {"number": 6182, "title": "fix: serialize pending tx nonce admission", "url": "https://github.com/Scottcjn/Rustchain/pull/6182", "surface": "Older low-touch maintenance"}
   ]
 }
-

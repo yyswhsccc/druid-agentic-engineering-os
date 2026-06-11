@@ -14,6 +14,7 @@ Last audited: **2026-06-11**.
 
 | Signal | Evidence | Why it matters |
 |---|---:|---|
+| Merged PRs overall | 47 | Publicly merged work across RustChain and selected external repositories. |
 | RustChain merged PRs | 45 | Public maintainer-reviewed outcomes in a real open-source codebase. |
 | Current RustChain review queue | 36 open PRs | Test-backed queue across payout, bridge, UTXO, governance, bounty, security, and reliability surfaces. |
 | New weekly queue | 34 clean PRs opened on 2026-06-11 | Shows systematic risk-surface discovery and small reviewable PR slicing. |
@@ -65,4 +66,3 @@ This repository is designed to publish a GitHub Pages portfolio from `docs/`.
 - GitHub profile: [yyswhsccc](https://github.com/yyswhsccc)
 - LinkedIn: [Yongshan Yu](https://www.linkedin.com/in/yongshan-yu-195771319/)
 - Email: [yuyongshan573@gmail.com](mailto:yuyongshan573@gmail.com)
-

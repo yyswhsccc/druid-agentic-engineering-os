@@ -34,7 +34,7 @@
           <div class="hero-content">
             <span class="eyebrow">Built by Yongshan Yu</span>
             <h1>Druid: Agentic Engineering OS</h1>
-            <p class="lead">I build frameworks that make AI coding tools operate reliably inside real repositories.</p>
+            <p class="lead">A low-touch agent framework for finding repo risks, shipping bounded fixes, tracking review feedback, and learning from real maintainer outcomes.</p>
             <div class="hero-actions">
               <a class="button primary" href="druid.html">Explore the system</a>
               <a class="button" href="evidence.html">View public evidence</a>
@@ -48,8 +48,8 @@
             <span class="label">RustChain PR review queue, test-backed and grouped by risk surface.</span>
           </div>
           <div class="metric-card">
-            <span class="number">45</span>
-            <span class="label">Merged RustChain PRs from public GitHub evidence.</span>
+            <span class="number">47</span>
+            <span class="label">Merged PRs overall, including 45 merged RustChain PRs.</span>
           </div>
           <div class="metric-card">
             <span class="number">7</span>
@@ -62,19 +62,19 @@
     <section class="section">
       <div class="shell">
         <h2>The product is the framework</h2>
-        <p class="section-intro">Druid is not the product I want to be hired to manually operate. Druid is proof that I can design agentic engineering systems that keep discovering, prioritizing, implementing, testing, reviewing, and learning with low ongoing supervision once the framework is built.</p>
+        <p class="section-intro">Druid is not a one-off AI prompt. It is an engineering loop: scan a live repository, classify risks, write the smallest useful patch, add regression tests, open the PR, track CI/review, and update strategy from what gets merged, rejected, superseded, or rewarded.</p>
         <div class="grid-3">
           <article class="proof-card">
-            <h3>Agent framework builder</h3>
-            <p>Connects repositories, issues, CI, tests, review rules, risk policy, and adaptive memory into one operating loop.</p>
+            <h3>Finds risk-shaped work</h3>
+            <p>Looks for places where state, money, security, review policy, or operational defaults can fail in ways maintainers care about.</p>
           </article>
           <article class="proof-card">
-            <h3>Security automation builder</h3>
-            <p>Finds vulnerability-shaped engineering risks: auth boundaries, public exposure, XSS/CORS, races, exact-once payout failures, and ledger drift.</p>
+            <h3>Ships bounded fixes</h3>
+            <p>Turns the finding into a narrow patch with tests, a reviewable PR body, and explicit risk boundaries.</p>
           </article>
           <article class="proof-card">
-            <h3>Developer productivity architect</h3>
-            <p>Turns one-off prompting into a repeatable, auditable system for repo maintenance and review-loop execution.</p>
+            <h3>Maintains the review loop</h3>
+            <p>Watches CI, maintainer feedback, stale work, superseded work, and merge/close signals instead of treating PR creation as the finish line.</p>
           </article>
         </div>
       </div>
@@ -82,52 +82,98 @@
 
     <section class="section">
       <div class="shell">
-        <h2>Operating loop</h2>
-        <p class="section-intro">Druid is a closed loop, not a single bot. Every merged, closed, superseded, dirty, stale, or rewarded PR becomes a strategy signal.</p>
-        <div class="panel diagram">
-          <img src="assets/druid-loop.svg" alt="Druid agentic engineering loop">
+        <h2>How Druid finds the work</h2>
+        <p class="section-intro">The agent looks for bug shapes that usually survive ordinary TODO scanning: value movement, state transitions, trust boundaries, concurrency, and production configuration edges.</p>
+        <div class="grid-3">
+          <article class="proof-card">
+            <p class="kicker">1 / Scan</p>
+            <h3>Map risky boundaries</h3>
+            <p>Starts from routes, CLI entry points, payout handlers, bridge flows, ledger writes, browser dashboards, env parsing, and recently changed code.</p>
+          </article>
+          <article class="proof-card">
+            <p class="kicker">2 / Prove</p>
+            <h3>Filter for real impact</h3>
+            <p>Keeps candidates only when the failure can affect money, state integrity, security exposure, reliability, review policy, or user-visible accounting.</p>
+          </article>
+          <article class="proof-card">
+            <p class="kicker">3 / Ship</p>
+            <h3>Cut to a reviewable PR</h3>
+            <p>Checks collision risk, writes the smallest patch, adds regression tests, explains the boundary, then tracks CI and maintainer feedback.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="shell">
-        <h2>RustChain review queue</h2>
-        <p class="section-intro">Druid generated a 36-PR test-backed review queue across payout exact-once semantics, bridge terminal-state integrity, UTXO transaction atomicity, governance accounting, bounty attribution, browser/security boundaries, and operational reliability hardening.</p>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Surface</th>
-                <th>Representative PRs</th>
-                <th>Proof value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Payout exact-once / terminal status</strong></td>
-                <td><a href="https://github.com/Scottcjn/Rustchain/pull/7385">#7385</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7357">#7357</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7353">#7353</a></td>
-                <td>Missing-row handling, terminal-status protection, and repeated-claim prevention.</td>
-              </tr>
-              <tr>
-                <td><strong>Bridge terminal integrity</strong></td>
-                <td><a href="https://github.com/Scottcjn/Rustchain/pull/7363">#7363</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7343">#7343</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7316">#7316</a></td>
-                <td>Bridge state visibility, terminal race protection, and operator-only flow clarity.</td>
-              </tr>
-              <tr>
-                <td><strong>UTXO / transaction atomicity</strong></td>
-                <td><a href="https://github.com/Scottcjn/Rustchain/pull/7350">#7350</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7339">#7339</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7335">#7335</a></td>
-                <td>Nonce serialization, ownership invariants, conservation checks, and rollback edges.</td>
-              </tr>
-              <tr>
-                <td><strong>Browser/security boundaries</strong></td>
-                <td><a href="https://github.com/Scottcjn/Rustchain/pull/7382">#7382</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7379">#7379</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7377">#7377</a></td>
-                <td>Legacy admin gates, dashboard escaping, Socket.IO CORS, and public status redaction.</td>
-              </tr>
-            </tbody>
-          </table>
+        <h2>Where Druid finds value</h2>
+        <p class="section-intro">The strongest signal is not raw PR count. It is the ability to scan a complex system and repeatedly find reviewable risk surfaces across independent parts of the codebase.</p>
+        <div class="surface-grid">
+          <article class="surface-card">
+            <p class="kicker">Money path</p>
+            <h3>Payout exact-once and terminal status</h3>
+            <p><strong>What it finds:</strong> repeated claim paths, missing status rows, terminal states that can be overwritten, and precision edges.</p>
+            <p><strong>Why fix:</strong> these bugs can corrupt balances, confuse payout state, or make accounting unreliable.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Bridge</p>
+            <h3>Terminal-state integrity</h3>
+            <p><strong>What it finds:</strong> bridge void/refund races, stale operator-only flows, malformed config defaults, and missing state visibility.</p>
+            <p><strong>Why fix:</strong> bridge flows are trust boundaries; ambiguous terminal states create payout and operator risk.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Ledger</p>
+            <h3>UTXO and transaction atomicity</h3>
+            <p><strong>What it finds:</strong> nonce races, ownership drift, value conservation edges, invalid rollback paths, and mempool inconsistencies.</p>
+            <p><strong>Why fix:</strong> transaction systems need invariants that survive concurrency, retries, and bad payloads.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Security boundary</p>
+            <h3>Browser, CORS, and public/admin exposure</h3>
+            <p><strong>What it finds:</strong> dashboard escaping gaps, permissive Socket.IO origins, public lock-status leaks, and legacy routes missing parity gates.</p>
+            <p><strong>Why fix:</strong> small UI/API boundary bugs become real attack surface when they expose state or accept hostile input.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Governance</p>
+            <h3>Proposal and fee accounting</h3>
+            <p><strong>What it finds:</strong> rejected proposal charge ordering, vote pagination drift, and hidden accounting truncation.</p>
+            <p><strong>Why fix:</strong> governance systems need state changes and fees to match user-visible outcomes.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Operations</p>
+            <h3>Reliability hardening</h3>
+            <p><strong>What it finds:</strong> malformed numeric env defaults, unsafe limits, payload compatibility breaks, and service startup footguns.</p>
+            <p><strong>Why fix:</strong> production systems fail at the edges; hardening those edges lowers recurring maintenance cost.</p>
+          </article>
         </div>
-        <p class="notice">Open PRs are review-queue evidence, not merged or accepted claims. Counts should be re-audited before public launches.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>How the loop maintains itself</h2>
+        <div class="split">
+          <div class="callout">
+            <p class="kicker">Autonomous, not reckless</p>
+            <h3>Low-touch routine work, human-gated risk.</h3>
+            <p>Druid currently uses bounty and reward signals as one training environment, but the framework generalizes to any repository with issues, tests, CI, and review feedback.</p>
+            <p>Routine work can run low-touch. High-risk decisions, policy changes, and final approvals stay human-in-the-loop.</p>
+          </div>
+          <div class="stack">
+            <div class="surface-card">
+              <h3>Discovery</h3>
+              <p>Scans issue activity, recent maintainer behavior, changed code paths, public endpoints, state machines, and test gaps.</p>
+            </div>
+            <div class="surface-card">
+              <h3>Prioritization</h3>
+              <p>Ranks tasks by risk surface, bounty/reward fit, proof quality, review friction, collision risk, and expected maintenance cost.</p>
+            </div>
+            <div class="surface-card">
+              <h3>Maintenance</h3>
+              <p>Tracks CI, review comments, requested changes, superseding PRs, dirty branches, stale work, and whether a maintenance note helps or just adds noise.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -139,4 +185,3 @@
   </footer>
 </body>
 </html>
-

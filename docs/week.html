@@ -74,9 +74,36 @@
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>How the queue was built</h2>
+        <div class="surface-grid">
+          <article class="surface-card">
+            <p class="kicker">Discovery pattern</p>
+            <h3>Start from high-consequence code paths</h3>
+            <p>Druid prioritized routes and modules where small mistakes have outsized impact: payout status, bridge terminal states, UTXO admission, governance fees, and public browser boundaries.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Review filter</p>
+            <h3>Keep the patch small enough to merge</h3>
+            <p>Candidates were split by one root cause, one surface, and one testable invariant so maintainers can review them without absorbing a broad rewrite.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Maintenance filter</p>
+            <h3>Track value without burning attention</h3>
+            <p>The framework lowers priority on zombie-risk PRs, watches CI and review state, and avoids repeating maintenance comments when there is no new information.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Learning signal</p>
+            <h3>Every outcome updates strategy</h3>
+            <p>Merged, closed, superseded, requested-change, stale, credited, and rewarded outcomes feed the next task-selection pass.</p>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer"><div class="shell"><p><a href="evidence.html">View the evidence board</a></p></div></footer>
 </body>
 </html>
-

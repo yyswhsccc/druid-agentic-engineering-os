@@ -26,11 +26,34 @@
       <div class="shell">
         <span class="eyebrow">Public proof</span>
         <h2>Evidence board</h2>
-        <p class="section-intro">All counts below came from live GitHub queries on 2026-06-11. Open PRs are review-queue evidence, not accepted, merged, or rewarded claims.</p>
+        <p class="section-intro">All counts below came from live GitHub queries on 2026-06-11. Open PRs are review-queue evidence, not accepted, merged, or rewarded claims. The evidence matters because it spans independent risk surfaces rather than one repeated bug shape.</p>
         <div class="grid-3">
-          <article class="metric-card accent"><span class="number">45</span><span class="label">Merged RustChain PRs.</span></article>
+          <article class="metric-card accent"><span class="number">47</span><span class="label">Merged PRs overall.</span></article>
           <article class="metric-card accent"><span class="number">36</span><span class="label">Open RustChain review queue.</span></article>
-          <article class="metric-card"><span class="number">1</span><span class="label">Selected merged PR outside RustChain.</span></article>
+          <article class="metric-card"><span class="number">45</span><span class="label">Merged RustChain PRs.</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>How to read the evidence</h2>
+        <div class="grid-3">
+          <article class="proof-card">
+            <p class="kicker">Finding</p>
+            <h3>Risk appears at boundaries</h3>
+            <p>Druid looks where code crosses trust, value, state, or operations boundaries: payout status, bridge state, UTXO ownership, CORS, admin gates, and env defaults.</p>
+          </article>
+          <article class="proof-card">
+            <p class="kicker">Proof</p>
+            <h3>A patch needs a reason</h3>
+            <p>Each useful PR should explain what can go wrong, why the existing behavior matters, and what regression test prevents the mistake from returning.</p>
+          </article>
+          <article class="proof-card">
+            <p class="kicker">Maintenance</p>
+            <h3>The loop continues after opening</h3>
+            <p>CI, maintainer comments, superseding work, merge/close outcomes, and stale PR cost all feed the next decision.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -61,21 +84,37 @@
     <section class="section">
       <div class="shell">
         <h2>Open high-signal review queue</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Surface</th><th>Representative PRs</th><th>Proof value</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>Payout exact-once / terminal status</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7385">#7385</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7357">#7357</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7353">#7353</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7378">#7378</a></td><td>Missing status handling, terminal-status protection, repeated-claim prevention, decimal precision boundaries.</td></tr>
-              <tr><td><strong>Bridge terminal integrity</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7363">#7363</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7343">#7343</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7330">#7330</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7316">#7316</a></td><td>State timestamps, terminal race protection, malformed config handling, operator-only documentation clarity.</td></tr>
-              <tr><td><strong>UTXO / transaction atomicity</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7350">#7350</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7339">#7339</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7335">#7335</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7333">#7333</a></td><td>Nonce serialization, ownership invariants, conservation checks, rollback edges.</td></tr>
-              <tr><td><strong>Governance accounting</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7347">#7347</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7345">#7345</a></td><td>Pagination and proposal-fee accounting paths that could otherwise drift silently.</td></tr>
-              <tr><td><strong>Bounty attribution / claims</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7367">#7367</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7361">#7361</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7359">#7359</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7383">#7383</a></td><td>Claim completion, persistence, missing status rows, and honest reward/receipt messaging.</td></tr>
-              <tr><td><strong>Browser/security boundaries</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7382">#7382</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7379">#7379</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7377">#7377</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7341">#7341</a></td><td>Legacy admin gates, dashboard escaping, Socket.IO CORS, and public lock-status redaction.</td></tr>
-              <tr><td><strong>Operational reliability</strong></td><td><a href="https://github.com/Scottcjn/Rustchain/pull/7380">#7380</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7376">#7376</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7328">#7328</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7322">#7322</a></td><td>Malformed numeric env defaults, limit floors, payload compatibility, and service hardening.</td></tr>
-            </tbody>
-          </table>
+        <div class="surface-grid">
+          <article class="surface-card">
+            <h3>Payout exact-once / terminal status</h3>
+            <p><a href="https://github.com/Scottcjn/Rustchain/pull/7385">#7385</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7357">#7357</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7353">#7353</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7378">#7378</a></p>
+            <p>Druid found value in missing status handling, terminal-status protection, repeated-claim prevention, and decimal precision boundaries.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Bridge terminal integrity</h3>
+            <p><a href="https://github.com/Scottcjn/Rustchain/pull/7363">#7363</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7343">#7343</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7330">#7330</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7316">#7316</a></p>
+            <p>These PRs focus on state timestamps, terminal race protection, malformed config handling, and operator-only flow clarity.</p>
+          </article>
+          <article class="surface-card">
+            <h3>UTXO / transaction atomicity</h3>
+            <p><a href="https://github.com/Scottcjn/Rustchain/pull/7350">#7350</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7339">#7339</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7335">#7335</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7333">#7333</a></p>
+            <p>Druid targeted nonce serialization, ownership invariants, value conservation, and rollback edges.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Governance / bounty attribution</h3>
+            <p><a href="https://github.com/Scottcjn/Rustchain/pull/7347">#7347</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7345">#7345</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7361">#7361</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7359">#7359</a></p>
+            <p>These cover proposal fee ordering, vote pagination, bounty completion guards, and claim persistence.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Browser / security boundaries</h3>
+            <p><a href="https://github.com/Scottcjn/Rustchain/pull/7382">#7382</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7379">#7379</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7377">#7377</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7341">#7341</a></p>
+            <p>Legacy admin gates, dashboard escaping, Socket.IO CORS, and public lock-status redaction are security boundary work.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Operational reliability</h3>
+            <p><a href="https://github.com/Scottcjn/Rustchain/pull/7380">#7380</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7376">#7376</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7328">#7328</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7322">#7322</a></p>
+            <p>Malformed numeric env defaults, limit floors, payload compatibility, and service hardening reduce production edge-case cost.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -92,4 +131,3 @@
   <footer class="footer"><div class="shell"><p>Evidence audit timestamp: 2026-06-11.</p></div></footer>
 </body>
 </html>
-

@@ -15,7 +15,7 @@
   </defs>
   <rect width="1120" height="520" rx="28" fill="#faf6ef"/>
   <path d="M0 424 C176 376 270 450 438 398 C652 334 764 178 948 232 C1032 256 1072 302 1120 314 L1120 520 L0 520 Z" fill="#eadbc9" opacity="0.7"/>
-  <g font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="760" fill="#2f2a24" filter="url(#shadow)">
+  <g font-family="Styrene A, Styrene B, Anthropic Sans, Helvetica Neue, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="760" fill="#2f2a24" filter="url(#shadow)">
     <g transform="translate(48 78)">
       <rect width="214" height="74" rx="18" fill="url(#paper)" stroke="#ded1c3"/>
       <text x="24" y="31">Issue / Bounty</text><text x="24" y="56">Scanner</text>
@@ -59,7 +59,7 @@
     <path d="M316 291h-50"/>
     <path d="M155 250v-91"/>
   </g>
-  <g font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" fill="#6f665c">
+  <g font-family="Tiempos Text, Tiempos, Iowan Old Style, Georgia, Cambria, Times New Roman, serif" font-size="15" fill="#6f665c">
     <text x="584" y="390">High-risk decisions remain human-gated.</text>
     <text x="584" y="418">Merged, closed, superseded, rewarded, dirty, and stale work becomes memory.</text>
   </g>

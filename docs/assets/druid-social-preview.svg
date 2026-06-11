@@ -16,21 +16,21 @@
   <g filter="url(#shadow)">
     <rect x="74" y="76" width="1052" height="478" rx="28" fill="#fffaf3" stroke="#ded1c3"/>
   </g>
-  <text x="118" y="148" fill="#9d6546" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="800" letter-spacing="3">BUILT BY YONGSHAN YU</text>
-  <text x="118" y="282" fill="#2f2a24" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="98" font-weight="820">DRUID</text>
-  <text x="122" y="348" fill="#2f2a24" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="44" font-weight="650">Agentic Engineering OS</text>
-  <text x="122" y="414" fill="#6f665c" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="30">Issue discovery -> risk classification -> patch + tests</text>
-  <text x="122" y="458" fill="#6f665c" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="30">review tracking -> adaptive memory -> stop-loss</text>
+  <text x="118" y="148" fill="#9d6546" font-family="Styrene A, Styrene B, Anthropic Sans, Helvetica Neue, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="800" letter-spacing="3">BUILT BY YONGSHAN YU</text>
+  <text x="118" y="282" fill="#2f2a24" font-family="Styrene A, Styrene B, Anthropic Sans, Helvetica Neue, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="98" font-weight="820">DRUID</text>
+  <text x="122" y="348" fill="#2f2a24" font-family="Styrene A, Styrene B, Anthropic Sans, Helvetica Neue, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="44" font-weight="650">Agentic Engineering OS</text>
+  <text x="122" y="414" fill="#6f665c" font-family="Styrene A, Styrene B, Anthropic Sans, Helvetica Neue, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="30">Issue discovery -> risk classification -> patch + tests</text>
+  <text x="122" y="458" fill="#6f665c" font-family="Styrene A, Styrene B, Anthropic Sans, Helvetica Neue, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="30">review tracking -> adaptive memory -> stop-loss</text>
   <g transform="translate(122 496)">
     <rect width="236" height="48" rx="24" fill="#c86f55"/>
-    <text x="25" y="31" fill="#fffaf3" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="800">36-PR review queue</text>
+    <text x="25" y="31" fill="#fffaf3" font-family="Styrene A, Styrene B, Anthropic Sans, Helvetica Neue, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="800">36-PR review queue</text>
   </g>
   <g transform="translate(382 496)">
     <rect width="214" height="48" rx="24" fill="#f0e2d4" stroke="#dccaba"/>
-    <text x="24" y="31" fill="#5e5047" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="800">test-backed PRs</text>
+    <text x="24" y="31" fill="#5e5047" font-family="Styrene A, Styrene B, Anthropic Sans, Helvetica Neue, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="800">test-backed PRs</text>
   </g>
   <g transform="translate(620 496)">
     <rect width="330" height="48" rx="24" fill="#f0e2d4" stroke="#dccaba"/>
-    <text x="24" y="31" fill="#5e5047" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="800">security + reliability automation</text>
+    <text x="24" y="31" fill="#5e5047" font-family="Styrene A, Styrene B, Anthropic Sans, Helvetica Neue, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="800">security + reliability automation</text>
   </g>
 </svg>

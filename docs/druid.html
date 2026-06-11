@@ -26,7 +26,7 @@
       <div class="shell">
         <span class="eyebrow">Featured system</span>
         <h2>Druid turns AI coding into an operating system</h2>
-        <p class="section-intro">The strongest signal is not that Druid found bugs. The strongest signal is that Yongshan built the architecture that lets Druid keep finding, validating, maintaining, and learning from engineering work autonomously inside defined strategy and human-supervision boundaries.</p>
+        <p class="section-intro">The strongest signal is not that Druid found bugs. The strongest signal is that Yongshan built the architecture that lets Druid keep finding, proving, patching, maintaining, and learning from real engineering work inside defined strategy and human-supervision boundaries.</p>
         <div class="panel diagram">
           <img src="assets/druid-loop.svg" alt="Druid architecture loop">
         </div>
@@ -36,47 +36,83 @@
     <section class="section">
       <div class="shell grid-2">
         <article class="proof-card">
-          <h3>Scanner</h3>
-          <p>Discovers repositories, issues, bounties, open review surfaces, recent maintainer activity, collision risk, and reward/merge signals.</p>
+          <p class="kicker">Scanner</p>
+          <h3>Finds risk-shaped work, not random TODOs</h3>
+          <p>Discovers active repositories, issue/bounty signals, open review surfaces, recent maintainer behavior, changed code paths, public endpoints, state machines, auth boundaries, and test gaps.</p>
         </article>
         <article class="proof-card">
-          <h3>Decision engine</h3>
-          <p>Ranks tasks by value, risk, testability, review friction, bounty fit, and maintenance cost. It can stop work when a PR becomes stale or low expected value.</p>
+          <p class="kicker">Classifier</p>
+          <h3>Ranks by impact and reviewability</h3>
+          <p>Prioritizes money-path, bridge, UTXO, governance, bounty, browser/security, and operational reliability risks when the issue can be proven with a small patch and tests.</p>
         </article>
         <article class="proof-card">
-          <h3>Patch and test generator</h3>
-          <p>Builds small patches with direct regression coverage. For money/security paths, it prefers PoC-to-fix over broad refactors.</p>
+          <p class="kicker">Patch / Test</p>
+          <h3>Turns findings into bounded PRs</h3>
+          <p>Builds small patches with direct regression coverage. For money/security paths, it prefers PoC-to-fix and explicit invariants over broad refactors.</p>
         </article>
         <article class="proof-card">
-          <h3>Review loop</h3>
-          <p>Tracks CI, maintainer comments, labels, requested changes, merge/close state, and whether a maintenance note is useful or just noise.</p>
+          <p class="kicker">Review loop</p>
+          <h3>Maintains work after PR creation</h3>
+          <p>Tracks CI, maintainer comments, labels, requested changes, merge/close state, branch cleanliness, and whether a maintenance note is useful or just noise.</p>
         </article>
         <article class="proof-card">
-          <h3>Adaptive memory</h3>
-          <p>Learns from merged, closed, superseded, credited, dirty, and zombie PRs. Strategy changes become reusable operating rules.</p>
+          <p class="kicker">Memory</p>
+          <h3>Learns from every outcome</h3>
+          <p>Merged, closed, superseded, credited, dirty, stale, and rewarded PRs become strategy signals. The point is to improve the next task selection, not just record a status.</p>
         </article>
         <article class="proof-card">
-          <h3>Human gates</h3>
-          <p>Designed for low touch after setup, not zero oversight. High-risk decisions, policy shifts, and final approvals remain human-in-the-loop.</p>
+          <p class="kicker">Human gates</p>
+          <h3>Low-touch is not no oversight</h3>
+          <p>Routine engineering work can run with minimal supervision. High-risk decisions, policy shifts, production secrets, payout behavior, and final approvals remain human-in-the-loop.</p>
         </article>
       </div>
     </section>
 
     <section class="section">
       <div class="shell">
+        <h2>What Druid actually detects</h2>
+        <p class="section-intro">Druid's current proof is not a generic code generator. It repeatedly finds concrete classes of engineering risk in a live codebase.</p>
+        <div class="surface-grid">
+          <article class="surface-card">
+            <h3>Exact-once accounting failures</h3>
+            <p>Repeated claims, missing status rows, terminal state drift, and precision edges in payout and reward flows.</p>
+          </article>
+          <article class="surface-card">
+            <h3>State-machine races</h3>
+            <p>Bridge void/refund races, stale state visibility, and terminal transitions that can be overwritten by later operations.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Transaction invariants</h3>
+            <p>Nonce admission races, UTXO ownership drift, conservation checks, invalid rollback paths, and mempool inconsistencies.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Security boundary drift</h3>
+            <p>Dashboard escaping, CORS origins, public/admin route parity, public lock-status exposure, and callback/API boundary risk.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
         <h2>What companies can reuse</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Internal need</th><th>Druid-shaped system</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>Security triage</strong></td><td>Agents that scan auth, public data exposure, callback, XSS/CORS, state-changing endpoint, and idempotency boundaries.</td></tr>
-              <tr><td><strong>Developer productivity</strong></td><td>Agents that turn recurring repo maintenance into patches, tests, PRs, and review summaries.</td></tr>
-              <tr><td><strong>Platform reliability</strong></td><td>Agents that find malformed env defaults, limit handling, payload compatibility, and operational footguns.</td></tr>
-              <tr><td><strong>Engineering management</strong></td><td>Evidence dashboards that show work state, proof value, review risk, and stop-loss decisions.</td></tr>
-            </tbody>
-          </table>
+        <div class="surface-grid">
+          <article class="surface-card">
+            <h3>Security triage agents</h3>
+            <p>Scan auth, public data exposure, callback, XSS/CORS, state-changing endpoint, and idempotency boundaries.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Developer productivity agents</h3>
+            <p>Turn recurring repo maintenance into patches, tests, PR bodies, review replies, and maintenance summaries.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Reliability agents</h3>
+            <p>Find malformed env defaults, limit handling, payload compatibility, startup failures, and operational footguns.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Engineering command centers</h3>
+            <p>Show work state, proof value, review risk, stale PR cost, stop-loss decisions, and strategy memory.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -85,4 +121,3 @@
   <footer class="footer"><div class="shell"><p><a href="index.html">Druid</a> / Built by Yongshan Yu</p></div></footer>
 </body>
 </html>
-
