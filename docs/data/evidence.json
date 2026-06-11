@@ -8,6 +8,32 @@
     "rustchain_clean_new_queue": 34,
     "outside_rustchain_selected_merged_prs": 1
   },
+  "credited_synthesized_work": [
+    {
+      "number": 6757,
+      "title": "fix: align Sophia epoch settlement guard",
+      "url": "https://github.com/Scottcjn/Rustchain/pull/6757",
+      "state": "closed",
+      "accepted_via": 6769,
+      "accepted_url": "https://github.com/Scottcjn/Rustchain/pull/6769",
+      "accepted_title": "security(consensus): atomic Sophia epoch settlement (synthesis of #6757 + #6760)",
+      "accepted_state": "merged",
+      "public_outcome": "Maintainer said the settlement fix and tests were included in merged synthesis #6769, co-credited Druid, and posted RTC payout comments on the #6757 thread.",
+      "proof_value": "Consensus and money-path correctness; Sophia epoch settlement guard; atomic claim reasoning; legacy settlement safety."
+    },
+    {
+      "number": 6842,
+      "title": "fix: bound pending confirmations and expose overdue state",
+      "url": "https://github.com/Scottcjn/Rustchain/pull/6842",
+      "state": "closed",
+      "accepted_via": 6900,
+      "accepted_url": "https://github.com/Scottcjn/Rustchain/pull/6900",
+      "accepted_title": "feat(node): bound /pending/confirm + overdue observability (clean reimpl of #6842)",
+      "accepted_state": "merged",
+      "public_outcome": "Maintainer rebuilt the good core of #6842 cleanly in merged #6900 and explicitly credited Druid as co-author for the bounded-confirm design. Yongshan later received 40 RTC for this accepted design.",
+      "proof_value": "Wallet and pending-ledger safety; bounded admin automation; overdue pending observability; review-driven repair."
+    }
+  ],
   "open_rustchain_review_queue": [
     {"number": 7385, "title": "fix(payout): return 404 for missing status records", "url": "https://github.com/Scottcjn/Rustchain/pull/7385", "surface": "Payout exact-once / terminal status"},
     {"number": 7383, "title": "fix(faucet): report keeper claims as receipts", "url": "https://github.com/Scottcjn/Rustchain/pull/7383", "surface": "Bounty attribution / claims"},

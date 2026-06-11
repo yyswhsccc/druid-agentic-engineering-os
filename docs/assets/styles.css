@@ -339,6 +339,77 @@ h1 {
   margin-bottom: 0;
 }
 
+.credited-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: 18px;
+  align-items: stretch;
+  margin: 26px 0 18px;
+  border: 1px solid rgba(116, 73, 54, 0.28);
+  background:
+    linear-gradient(135deg, rgba(234, 215, 200, 0.88), rgba(255, 250, 242, 0.94)),
+    var(--panel);
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.credited-copy {
+  padding: 6px 6px 6px 2px;
+}
+
+.credited-copy h3 {
+  margin: 0 0 12px;
+  font-size: clamp(1.45rem, 2.6vw, 2.2rem);
+  line-height: 1.04;
+}
+
+.credited-copy p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.credited-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.credited-card {
+  border: 1px solid rgba(185, 159, 138, 0.82);
+  background: rgba(255, 250, 242, 0.92);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(72, 49, 35, 0.08);
+}
+
+.credited-card h4 {
+  margin: 0 0 10px;
+  font-size: 1.08rem;
+}
+
+.credited-card p {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.credited-card p:last-child {
+  margin-bottom: 0;
+}
+
+.status-pill {
+  display: inline-flex;
+  width: fit-content;
+  padding: 5px 10px;
+  border: 1px solid rgba(116, 73, 54, 0.24);
+  border-radius: 999px;
+  background: rgba(184, 105, 75, 0.10);
+  color: var(--accent-dark) !important;
+  font-size: 0.8rem;
+  font-weight: 760;
+  letter-spacing: 0.02em;
+}
+
 .table-wrap {
   overflow-x: auto;
   border: 1px solid var(--line);
@@ -640,7 +711,9 @@ td strong {
   .grid-3,
   .split,
   .surface-grid,
-  .audit-grid {
+  .audit-grid,
+  .credited-panel,
+  .credited-grid {
     grid-template-columns: 1fr;
   }
 

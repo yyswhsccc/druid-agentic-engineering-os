@@ -28,6 +28,27 @@
         <span class="eyebrow">Public proof</span>
         <h2>Evidence board</h2>
         <p class="section-intro">All counts below came from live GitHub queries on 2026-06-11. Open PRs are review-queue evidence, not accepted, merged, or rewarded claims. The evidence matters because it spans independent risk surfaces rather than one repeated bug shape.</p>
+        <div class="credited-panel" aria-labelledby="credited-heading">
+          <div class="credited-copy">
+            <p class="kicker">Start here</p>
+            <h3 id="credited-heading">Closed can still mean accepted.</h3>
+            <p>These two RustChain PRs are not ordinary closed PRs. Maintainers adopted their core designs into merged follow-up work, with credit back to Druid. This is high-signal evidence that the agent can produce designs worth carrying forward even when the maintainer chooses a clean synthesis or reimplementation.</p>
+          </div>
+          <div class="credited-grid">
+            <article class="credited-card">
+              <p class="status-pill">Synthesized, merged, RTC rewarded</p>
+              <h4><a href="https://github.com/Scottcjn/Rustchain/pull/6757">RustChain #6757</a> -> <a href="https://github.com/Scottcjn/Rustchain/pull/6769">#6769</a></h4>
+              <p>Sophia epoch settlement guard work became part of the merged atomic settlement synthesis. Public maintainer comments credit the fix and tests, with RTC payout comments on the thread.</p>
+              <p class="small">Proof value: consensus and money-path correctness; atomic claim reasoning; legacy settlement safety.</p>
+            </article>
+            <article class="credited-card">
+              <p class="status-pill">Clean reimplementation merged, 40 RTC received</p>
+              <h4><a href="https://github.com/Scottcjn/Rustchain/pull/6842">RustChain #6842</a> -> <a href="https://github.com/Scottcjn/Rustchain/pull/6900">#6900</a></h4>
+              <p>The bounded pending-confirm design and overdue observability were rebuilt cleanly by the owner and merged in #6900, with explicit co-author credit for Druid's design. Yongshan later received 40 RTC for this accepted design.</p>
+              <p class="small">Proof value: wallet/pending-ledger safety; bounded admin automation; overdue state observability.</p>
+            </article>
+          </div>
+        </div>
         <div class="grid-3">
           <article class="metric-card accent"><span class="number">47</span><span class="label">Merged PRs overall.</span></article>
           <article class="metric-card accent"><span class="number">36</span><span class="label">Open RustChain review queue.</span></article>
