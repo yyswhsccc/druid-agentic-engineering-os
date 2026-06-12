@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Evidence Board | Druid</title>
-  <meta name="description" content="Public GitHub evidence for Druid: merged PRs, open review queue, and selected proof values.">
+  <meta name="description" content="Our public GitHub evidence: merged PRs, open review queue, and selected proof values.">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -27,12 +27,12 @@
       <div class="shell">
         <span class="eyebrow">Public proof</span>
         <h2>Evidence board</h2>
-        <p class="section-intro">Counts below come from the current GitHub evidence audit and the latest stop-loss cleanup. Open PRs are review-queue evidence, not accepted, merged, or rewarded claims. The evidence matters because it spans independent risk surfaces rather than one repeated bug shape.</p>
+        <p class="section-intro">Counts below come from our current GitHub evidence audit and the latest stop-loss cleanup. Open PRs are review-queue evidence, not accepted, merged, or rewarded claims. The evidence matters because we span independent risk surfaces rather than one repeated bug shape.</p>
         <div class="credited-panel" aria-labelledby="credited-heading">
           <div class="credited-copy">
             <p class="kicker">Start here</p>
             <h3 id="credited-heading">Closed can still mean accepted.</h3>
-            <p>These two RustChain PRs are not ordinary closed PRs. Maintainers adopted their core designs into merged follow-up work, with credit back to Druid. This is high-signal evidence that the agent can produce designs worth carrying forward even when the maintainer chooses a clean synthesis or reimplementation.</p>
+            <p>These two RustChain PRs are not ordinary closed PRs. Maintainers adopted their core designs into merged follow-up work, with credit back to us. This is high-signal evidence that we can produce designs worth carrying forward even when the maintainer chooses a clean synthesis or reimplementation.</p>
           </div>
           <div class="credited-grid">
             <article class="credited-card">
@@ -44,7 +44,7 @@
             <article class="credited-card">
               <p class="status-pill">Clean reimplementation merged, 40 RTC received</p>
               <h4><a href="https://github.com/Scottcjn/Rustchain/pull/6842">RustChain #6842</a> -> <a href="https://github.com/Scottcjn/Rustchain/pull/6900">#6900</a></h4>
-              <p>The bounded pending-confirm design and overdue observability were rebuilt cleanly by the owner and merged in #6900, with explicit co-author credit for Druid's design. Yongshan later received 40 RTC for this accepted design.</p>
+              <p>The bounded pending-confirm design and overdue observability were rebuilt cleanly by the owner and merged in #6900, with explicit co-author credit for our design. Yongshan later received 40 RTC for this accepted design.</p>
               <p class="small">Proof value: wallet/pending-ledger safety; bounded admin automation; overdue state observability.</p>
             </article>
           </div>
@@ -65,12 +65,12 @@
           <article class="proof-card">
             <p class="kicker">Finding</p>
             <h3>Risk appears at boundaries</h3>
-            <p>Druid looks where code crosses trust, value, state, or operations boundaries: payout status, bridge state, UTXO ownership, CORS, admin gates, and env defaults.</p>
+            <p>We look where code crosses trust, value, state, or operations boundaries: payout status, bridge state, UTXO ownership, CORS, admin gates, and env defaults.</p>
           </article>
           <article class="proof-card">
             <p class="kicker">Proof</p>
             <h3>A patch needs a reason</h3>
-            <p>Each useful PR should explain what can go wrong, why the existing behavior matters, and what regression test prevents the mistake from returning.</p>
+            <p>Each useful PR we open should explain what can go wrong, why the existing behavior matters, and what regression test prevents the mistake from returning.</p>
           </article>
           <article class="proof-card">
             <p class="kicker">Maintenance</p>
@@ -84,7 +84,7 @@
     <section class="section">
       <div class="shell">
         <h2>All merged work, grouped by technical surface</h2>
-        <p class="section-intro">This is the complete merged proof set from the current audit: 45 RustChain merged PRs plus one selected external merged PR. The categories matter more than raw count: they show Druid repeatedly reaching different parts of a complex codebase and turning them into bounded, reviewable changes.</p>
+        <p class="section-intro">This is the complete merged proof set from our current audit: 45 RustChain merged PRs plus one selected external merged PR. The categories matter more than raw count: they show us repeatedly reaching different parts of a complex codebase and turning them into bounded, reviewable changes.</p>
         <div class="hero-actions">
           <button class="button" type="button" data-expand-merged>Expand all merged PRs</button>
           <button class="button" type="button" data-collapse-merged>Collapse groups</button>
@@ -105,7 +105,7 @@
           <article class="surface-card">
             <h3>Payout exact-once / terminal status</h3>
             <p><a href="https://github.com/Scottcjn/Rustchain/pull/7385">#7385</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7357">#7357</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7353">#7353</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7355">#7355</a></p>
-            <p>Druid found value in missing status handling, terminal-status protection, repeated-claim prevention, and withdrawal accounting boundaries.</p>
+            <p>We found value in missing status handling, terminal-status protection, repeated-claim prevention, and withdrawal accounting boundaries.</p>
           </article>
           <article class="surface-card">
             <h3>Bridge terminal integrity</h3>
@@ -115,7 +115,7 @@
           <article class="surface-card">
             <h3>UTXO / transaction atomicity</h3>
             <p><a href="https://github.com/Scottcjn/Rustchain/pull/7350">#7350</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7339">#7339</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7335">#7335</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7333">#7333</a></p>
-            <p>Druid targeted nonce serialization, ownership invariants, value conservation, and rollback edges.</p>
+            <p>We targeted nonce serialization, ownership invariants, value conservation, and rollback edges.</p>
           </article>
           <article class="surface-card">
             <h3>Governance / bounty attribution</h3>
@@ -139,17 +139,17 @@
     <section class="section">
       <div class="shell">
         <h2>Self-closed stop-loss evidence</h2>
-        <p class="section-intro">Druid does not treat every opened branch as something that must be defended forever. Closed-unmerged work appeared early in its RustChain history, and the current operating loop now makes that behavior explicit: if a PR loses real engineering value, falls outside the live bounty surface, or would add low-signal review load, Druid can close it and preserve the lesson.</p>
+        <p class="section-intro">We do not treat every opened branch as something that must be defended forever. Closed-unmerged work appeared early in our RustChain history, and our current operating loop now makes that behavior explicit: if a PR loses real engineering value, falls outside the live bounty surface, or would add low-signal review load, we can close it and preserve the lesson.</p>
         <div class="surface-grid">
           <article class="surface-card">
             <h3><a href="https://github.com/Scottcjn/Rustchain/pull/7378">#7378</a> — tip-bot precision stop-loss</h3>
             <p>Scott verified the current tip bot was undeployed reference scaffolding: it appended to an in-memory list, had no live <code>/wallet/transfer</code> path wired, and moved no real funds.</p>
-            <p>Druid self-closed the PR instead of keeping a low-signal branch alive or trying to reframe it as bounty work.</p>
+            <p>We self-closed the PR instead of keeping a low-signal branch alive or trying to reframe it as bounty work.</p>
           </article>
           <article class="surface-card">
             <h3><a href="https://github.com/Scottcjn/Rustchain/pull/7382">#7382</a> — render-demo scope stop-loss</h3>
             <p>The linked issue was closed under the live-surface policy as an undeployed/reference render-demo scope item.</p>
-            <p>Druid closed the branch to reduce review load, while keeping the broader rule: useful current-main patches can stay open as ordinary maintainer-review work.</p>
+            <p>We closed the branch to reduce review load, while keeping the broader rule: useful current-main patches can stay open as ordinary maintainer-review work.</p>
           </article>
         </div>
       </div>
@@ -158,7 +158,7 @@
     <section class="section">
       <div class="shell">
         <h2>Machine-readable evidence</h2>
-        <p class="section-intro">The raw queue snapshot is stored as JSON so the board can later be refreshed by a GitHub Action or local Druid audit task.</p>
+        <p class="section-intro">We store the raw queue snapshot as JSON so the board can later be refreshed by a GitHub Action or our local audit task.</p>
         <a class="button" href="data/evidence.json">Open evidence.json</a>
       </div>
     </section>

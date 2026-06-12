@@ -48,5 +48,5 @@
     "Separate payout eligibility from PR engineering value when bounty issues are closed.",
     "Keep high-risk decisions, policy changes, and final approvals human-in-the-loop."
   ],
-  "evolution_note": "This policy evolved from Druid's own operating history: broad scans, zombie PR loops, repeated local maintenance candidates, closed-scope PRs, and expensive quota probes were converted into pruning, dedupe, self-close, and stop-loss rules."
+  "evolution_note": "We evolved this policy from our own operating history: broad scans, zombie PR loops, repeated local maintenance candidates, closed-scope PRs, and expensive quota probes were converted into pruning, dedupe, self-close, and stop-loss rules."
 }

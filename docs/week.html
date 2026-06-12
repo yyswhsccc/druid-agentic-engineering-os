@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>This Week | Druid Command Log</title>
-  <meta name="description" content="Recent Druid weekly command log and review queue summary.">
+  <meta name="description" content="Our recent weekly command log and review queue summary.">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -26,8 +26,8 @@
     <section class="section">
       <div class="shell">
         <span class="eyebrow">Command log</span>
-        <h2>This week Druid built a high-signal RustChain review queue</h2>
-        <p class="section-intro">This page is the living weekly dashboard. It shows what the framework did recently, without reducing the story to raw PR volume.</p>
+        <h2>This week we built a high-signal RustChain review queue</h2>
+        <p class="section-intro">This page is our living weekly dashboard. It shows what we did recently, without reducing the story to raw PR volume.</p>
         <div class="grid-3">
           <article class="metric-card accent"><span class="number">36</span><span class="label">RustChain PRs generated in the test-backed weekly queue.</span></article>
           <article class="metric-card"><span class="number">34</span><span class="label">Active open RustChain PRs currently tracked after stop-loss cleanup.</span></article>
@@ -42,23 +42,23 @@
         <div class="timeline">
           <div class="timeline-item">
             <time>2026-06-11</time>
-            <p>Druid focused RustChain as the primary bounty target and stopped treating broad repo exploration as the default path.</p>
+            <p>We focused RustChain as the primary bounty target and stopped treating broad repo exploration as the default path.</p>
           </div>
           <div class="timeline-item">
             <time>2026-06-11</time>
-            <p>It generated a 36-PR test-backed review queue across payout, bridge, UTXO, governance, bounty, browser/security, and reliability surfaces.</p>
+            <p>We generated a 36-PR test-backed review queue across payout, bridge, UTXO, governance, bounty, browser/security, and reliability surfaces.</p>
           </div>
           <div class="timeline-item">
             <time>2026-06-11</time>
-            <p>It separated high-value new work from older zombie-risk PRs, keeping maintenance cost low instead of burning attention on stale branches.</p>
+            <p>We separated high-value new work from older zombie-risk PRs, keeping maintenance cost low instead of burning attention on stale branches.</p>
           </div>
           <div class="timeline-item">
             <time>2026-06-12</time>
-            <p>It self-closed low-signal branches after new scope evidence arrived: #7378 was closed after the tip-bot path was verified as undeployed, in-memory-only, and not moving real funds; #7382 was closed after the linked render-demo scope was ruled out by the live-surface policy.</p>
+            <p>We self-closed low-signal branches after new scope evidence arrived: #7378 was closed after the tip-bot path was verified as undeployed, in-memory-only, and not moving real funds; #7382 was closed after the linked render-demo scope was ruled out by the live-surface policy.</p>
           </div>
           <div class="timeline-item">
             <time>Ongoing</time>
-            <p>The queue is tracked as review evidence. Merge, close, supersede, reward, and maintainer feedback signals should feed back into strategy memory.</p>
+            <p>We track the queue as review evidence. Merge, close, supersede, reward, and maintainer feedback signals feed back into our strategy memory.</p>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
     <section class="section">
       <div class="shell">
         <h2>Why this matters</h2>
-        <p class="section-intro">The value is not raw PR count. The value is that Druid scanned a complex codebase, found real engineering risk surfaces, split them into small reviewable patches, attached tests and risk boundaries, and kept them in an auditable review queue.</p>
+        <p class="section-intro">The value is not raw PR count. The value is that we scanned a complex codebase, found real engineering risk surfaces, split them into small reviewable patches, attached tests and risk boundaries, and kept them in an auditable review queue.</p>
         <div class="tag-list">
           <span class="tag">payout exact-once</span>
           <span class="tag">bridge terminal states</span>
@@ -87,22 +87,22 @@
           <article class="surface-card">
             <p class="kicker">Discovery pattern</p>
             <h3>Start from high-consequence code paths</h3>
-            <p>Druid prioritized routes and modules where small mistakes have outsized impact: payout status, bridge terminal states, UTXO admission, governance fees, and public browser boundaries.</p>
+            <p>We prioritized routes and modules where small mistakes have outsized impact: payout status, bridge terminal states, UTXO admission, governance fees, and public browser boundaries.</p>
           </article>
           <article class="surface-card">
             <p class="kicker">Review filter</p>
             <h3>Keep the patch small enough to merge</h3>
-            <p>Candidates were split by one root cause, one surface, and one testable invariant so maintainers can review them without absorbing a broad rewrite.</p>
+            <p>We split candidates by one root cause, one surface, and one testable invariant so maintainers can review them without absorbing a broad rewrite.</p>
           </article>
           <article class="surface-card">
             <p class="kicker">Maintenance filter</p>
             <h3>Track value without burning attention</h3>
-            <p>The framework lowers priority on zombie-risk PRs, watches CI and review state, and avoids repeating maintenance comments when there is no new information.</p>
+            <p>We lower priority on zombie-risk PRs, watch CI and review state, and avoid repeating maintenance comments when there is no new information.</p>
           </article>
           <article class="surface-card">
             <p class="kicker">Learning signal</p>
             <h3>Every outcome updates strategy</h3>
-            <p>Merged, closed, superseded, requested-change, stale, credited, and rewarded outcomes feed the next task-selection pass.</p>
+            <p>Merged, closed, superseded, requested-change, stale, credited, and rewarded outcomes feed our next task-selection pass.</p>
           </article>
         </div>
       </div>

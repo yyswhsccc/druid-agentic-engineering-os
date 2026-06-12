@@ -19,7 +19,7 @@
       "accepted_url": "https://github.com/Scottcjn/Rustchain/pull/6769",
       "accepted_title": "security(consensus): atomic Sophia epoch settlement (synthesis of #6757 + #6760)",
       "accepted_state": "merged",
-      "public_outcome": "Maintainer said the settlement fix and tests were included in merged synthesis #6769, co-credited Druid, and posted RTC payout comments on the #6757 thread.",
+      "public_outcome": "Maintainer said the settlement fix and tests were included in merged synthesis #6769, co-credited us, and posted RTC payout comments on the #6757 thread.",
       "proof_value": "Consensus and money-path correctness; Sophia epoch settlement guard; atomic claim reasoning; legacy settlement safety."
     },
     {
@@ -31,7 +31,7 @@
       "accepted_url": "https://github.com/Scottcjn/Rustchain/pull/6900",
       "accepted_title": "feat(node): bound /pending/confirm + overdue observability (clean reimpl of #6842)",
       "accepted_state": "merged",
-      "public_outcome": "Maintainer rebuilt the good core of #6842 cleanly in merged #6900 and explicitly credited Druid as co-author for the bounded-confirm design. Yongshan later received 40 RTC for this accepted design.",
+      "public_outcome": "Maintainer rebuilt the good core of #6842 cleanly in merged #6900 and explicitly credited us as co-author for the bounded-confirm design. Yongshan later received 40 RTC for this accepted design.",
       "proof_value": "Wallet and pending-ledger safety; bounded admin automation; overdue pending observability; review-driven repair."
     }
   ],
@@ -78,7 +78,7 @@
       "url": "https://github.com/Scottcjn/Rustchain/pull/7378",
       "state": "closed-unmerged",
       "closed_by": "yyswhsccc",
-      "reason": "Scott verified the current tip bot was undeployed reference scaffolding that appended to an in-memory list, had no live /wallet/transfer path wired, and moved no real funds. Druid closed the branch instead of keeping a low-signal PR alive.",
+      "reason": "Scott verified the current tip bot was undeployed reference scaffolding that appended to an in-memory list, had no live /wallet/transfer path wired, and moved no real funds. We closed the branch instead of keeping a low-signal PR alive.",
       "proof_value": "Stop-loss discipline; payout-eligibility triage; token-aware maintenance."
     },
     {
@@ -87,7 +87,7 @@
       "url": "https://github.com/Scottcjn/Rustchain/pull/7382",
       "state": "closed-unmerged",
       "closed_by": "yyswhsccc",
-      "reason": "The linked bounty issue was closed under the live-surface policy as an undeployed/reference render-demo scope item, so Druid stopped the branch rather than adding low-signal review load.",
+      "reason": "The linked bounty issue was closed under the live-surface policy as an undeployed/reference render-demo scope item, so we stopped the branch rather than adding low-signal review load.",
       "proof_value": "Closed-scope pruning; review-load reduction; economic maintenance."
     }
   ]

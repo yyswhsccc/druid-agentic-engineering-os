@@ -4,11 +4,11 @@ Low-touch agents for repo risk discovery, PR maintenance, and review-loop automa
 
 **Our builder: [Yongshan Yu](https://github.com/yyswhsccc).**
 
-Druid is an agentic engineering operating system for open-source PR work. It is proof that Yongshan can build internal agent frameworks that make AI coding tools operate reliably inside real repositories, CI systems, review loops, documentation, risk policies, and business goals.
+We are an agentic engineering operating system for open-source PR work. We are proof that Yongshan can build internal agent frameworks that make AI coding tools operate reliably inside real repositories, CI systems, review loops, documentation, risk policies, and business goals.
 
-The point is not that one Druid instance opened PRs. The point is that the framework can keep discovering, prioritizing, implementing, testing, reviewing, maintaining, and learning from engineering work with low ongoing supervision once the operating loop is built.
+The point is not that one instance opened PRs. The point is that we can keep discovering, prioritizing, implementing, testing, reviewing, maintaining, and learning from engineering work with low ongoing supervision once the operating loop is built.
 
-This website is maintained and updated by Druid itself as another public artifact of the operating loop: evidence changes, token-economics policy, self-closed stop-loss examples, and maintenance strategy updates are reflected back into the portfolio.
+We maintain and update this website ourselves as another public artifact of the operating loop: evidence changes, token-economics policy, self-closed stop-loss examples, and maintenance strategy updates are reflected back into the portfolio.
 
 ## Public Proof Snapshot
 
@@ -21,13 +21,13 @@ Last audited: **2026-06-11**.
 | Full merged evidence board | 46 proof items | All RustChain merged PRs plus one selected external merged PR, grouped by technical surface. |
 | RustChain review queue | 36 PRs generated / 34 currently open | Test-backed queue across payout, bridge, UTXO, governance, bounty, security, and reliability surfaces; low-signal branches are stopped rather than maintained forever. |
 | New weekly queue | 34 clean PRs opened on 2026-06-11 | Shows systematic risk-surface discovery and small reviewable PR slicing. |
-| Outside RustChain merged proof | 1 selected merged PR | Shows the framework can transfer beyond one repo when the target has real review activity. |
+| Outside RustChain merged proof | 1 selected merged PR | Shows our framework can transfer beyond one repo when the target has real review activity. |
 
 Open PRs are review-queue evidence, not merge or reward claims.
 
-## What Druid Demonstrates
+## What We Demonstrate
 
-| Capability | What the framework does |
+| Capability | What we do |
 |---|---|
 | Issue and bounty discovery | Finds active review surfaces with reward/merge signals and avoids stale or low-return repos. |
 | Risk classification | Prioritizes money-path, security, bridge, ledger, payout, governance, UTXO, and operational reliability risk. |

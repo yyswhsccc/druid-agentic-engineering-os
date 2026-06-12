@@ -509,7 +509,7 @@
           "url": "https://github.com/mgzwarrior/mgz-pkmn/pull/217",
           "merged_at": "2026-05-17T03:40:58Z",
           "technical_point": "Adds direct helper tests for price formatting and row deduplication behavior.",
-          "why_it_matters": "Shows the Druid loop can produce maintainer-approved, focused test coverage outside RustChain.",
+          "why_it_matters": "Shows our loop can produce maintainer-approved, focused test coverage outside RustChain.",
           "scope": "1 file, +59/-10"
         }
       ]
