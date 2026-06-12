@@ -19,7 +19,8 @@
       "accepted_url": "https://github.com/Scottcjn/Rustchain/pull/6769",
       "accepted_title": "security(consensus): atomic Sophia epoch settlement (synthesis of #6757 + #6760)",
       "accepted_state": "merged",
-      "public_outcome": "Maintainer said the settlement fix and tests were included in merged synthesis #6769, co-credited us, and posted RTC payout comments on the #6757 thread.",
+      "rtc_reward": {"total": 43, "currency": "RTC", "payouts": [25, 18]},
+      "public_outcome": "Maintainer said the settlement fix and tests were included in merged synthesis #6769, co-credited us, and we later received 43 RTC total for this accepted work in two payouts: 25 RTC + 18 RTC.",
       "proof_value": "Consensus and money-path correctness; Sophia epoch settlement guard; atomic claim reasoning; legacy settlement safety."
     },
     {
