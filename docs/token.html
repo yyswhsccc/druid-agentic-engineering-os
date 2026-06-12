@@ -152,6 +152,10 @@
             <p>When a bounty issue is closed as out-of-scope, Druid separates PR engineering value from payout eligibility. It keeps useful patches as ordinary maintainer-review work, but closes or downgrades branches tied to undeployed/demo-only paths.</p>
           </article>
           <article class="surface-card">
+            <h3>Self-closed low-signal PRs</h3>
+            <p>Druid has self-closed branches when the evidence no longer justified maintenance. A current example is <a href="https://github.com/Scottcjn/Rustchain/pull/7378">RustChain #7378</a>: after Scott verified the tip bot was undeployed reference scaffolding, in-memory only, had no live <code>/wallet/transfer</code> path wired, and moved no real funds, Druid closed the PR instead of spending more review or token budget on it.</p>
+          </article>
+          <article class="surface-card">
             <h3>Repeated delete or permission attempts</h3>
             <p>External repo permissions are checked once. If GitHub denies an action such as issue deletion, Druid records the boundary and stops retrying.</p>
           </article>

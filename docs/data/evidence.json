@@ -1,10 +1,11 @@
 {
-  "last_audited": "2026-06-11",
+  "last_audited": "2026-06-11 MDT / 2026-06-12 UTC",
   "claims": {
     "merged_prs_overall": 47,
     "rustchain_merged_prs": 45,
     "merged_public_proof_items": 46,
-    "rustchain_open_prs": 36,
+    "rustchain_prs_generated_in_weekly_queue": 36,
+    "rustchain_open_prs": 34,
     "rustchain_clean_new_queue": 34,
     "outside_rustchain_selected_merged_prs": 1
   },
@@ -37,10 +38,8 @@
   "open_rustchain_review_queue": [
     {"number": 7385, "title": "fix(payout): return 404 for missing status records", "url": "https://github.com/Scottcjn/Rustchain/pull/7385", "surface": "Payout exact-once / terminal status"},
     {"number": 7383, "title": "fix(faucet): report keeper claims as receipts", "url": "https://github.com/Scottcjn/Rustchain/pull/7383", "surface": "Bounty attribution / claims"},
-    {"number": 7382, "title": "fix(gpu): gate legacy protocol escrow routes", "url": "https://github.com/Scottcjn/Rustchain/pull/7382", "surface": "Browser/security boundaries"},
     {"number": 7380, "title": "fix(poa): tolerate malformed numeric env defaults", "url": "https://github.com/Scottcjn/Rustchain/pull/7380", "surface": "Operational reliability"},
     {"number": 7379, "title": "fix(status): escape dashboard status fields", "url": "https://github.com/Scottcjn/Rustchain/pull/7379", "surface": "Browser/security boundaries"},
-    {"number": 7378, "title": "fix(tip-bot): validate decimal precision before float rounding", "url": "https://github.com/Scottcjn/Rustchain/pull/7378", "surface": "Payout exact-once / terminal status"},
     {"number": 7377, "title": "fix(explorer): restrict Socket.IO CORS origins", "url": "https://github.com/Scottcjn/Rustchain/pull/7377", "surface": "Browser/security boundaries"},
     {"number": 7376, "title": "fix(rate-limit): tolerate malformed env defaults", "url": "https://github.com/Scottcjn/Rustchain/pull/7376", "surface": "Operational reliability"},
     {"number": 7367, "title": "fix(claims): return false for missing status rows", "url": "https://github.com/Scottcjn/Rustchain/pull/7367", "surface": "Bounty attribution / claims"},
@@ -71,5 +70,25 @@
     {"number": 7316, "title": "docs(bridge): clarify operator-only bridge initiate flow", "url": "https://github.com/Scottcjn/Rustchain/pull/7316", "surface": "Bridge terminal integrity"},
     {"number": 6823, "title": "feat: record miner header key rotations", "url": "https://github.com/Scottcjn/Rustchain/pull/6823", "surface": "Older low-touch maintenance"},
     {"number": 6182, "title": "fix: serialize pending tx nonce admission", "url": "https://github.com/Scottcjn/Rustchain/pull/6182", "surface": "Older low-touch maintenance"}
+  ],
+  "self_closed_stop_loss_examples": [
+    {
+      "number": 7378,
+      "title": "fix(tip-bot): validate decimal precision before float rounding",
+      "url": "https://github.com/Scottcjn/Rustchain/pull/7378",
+      "state": "closed-unmerged",
+      "closed_by": "yyswhsccc",
+      "reason": "Scott verified the current tip bot was undeployed reference scaffolding that appended to an in-memory list, had no live /wallet/transfer path wired, and moved no real funds. Druid closed the branch instead of keeping a low-signal PR alive.",
+      "proof_value": "Stop-loss discipline; payout-eligibility triage; token-aware maintenance."
+    },
+    {
+      "number": 7382,
+      "title": "fix(gpu): gate legacy protocol escrow routes",
+      "url": "https://github.com/Scottcjn/Rustchain/pull/7382",
+      "state": "closed-unmerged",
+      "closed_by": "yyswhsccc",
+      "reason": "The linked bounty issue was closed under the live-surface policy as an undeployed/reference render-demo scope item, so Druid stopped the branch rather than adding low-signal review load.",
+      "proof_value": "Closed-scope pruning; review-load reduction; economic maintenance."
+    }
   ]
 }

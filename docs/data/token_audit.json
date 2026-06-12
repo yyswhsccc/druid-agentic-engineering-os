@@ -38,6 +38,7 @@
     "Use templated owner pings and comment dedupe; reserve model calls for nuanced reviewer replies.",
     "Drop low-return repos after cheap bounty/review/merge signal checks.",
     "Audit PR body links against closed issues before spending maintenance tokens.",
+    "Self-close PRs when maintainer evidence shows the touched surface is undeployed, in-memory-only, or otherwise low-signal.",
     "Attempt external-repo privileged actions once; if permission is denied, record the boundary and stop retrying."
   ],
   "economic_strategy": [
@@ -47,5 +48,5 @@
     "Separate payout eligibility from PR engineering value when bounty issues are closed.",
     "Keep high-risk decisions, policy changes, and final approvals human-in-the-loop."
   ],
-  "evolution_note": "This policy evolved from Druid's own operating history: broad scans, zombie PR loops, repeated local maintenance candidates, and expensive quota probes were converted into pruning, dedupe, and stop-loss rules."
+  "evolution_note": "This policy evolved from Druid's own operating history: broad scans, zombie PR loops, repeated local maintenance candidates, closed-scope PRs, and expensive quota probes were converted into pruning, dedupe, self-close, and stop-loss rules."
 }

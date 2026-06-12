@@ -27,7 +27,7 @@
       <div class="shell">
         <span class="eyebrow">Public proof</span>
         <h2>Evidence board</h2>
-        <p class="section-intro">All counts below came from live GitHub queries on 2026-06-11. Open PRs are review-queue evidence, not accepted, merged, or rewarded claims. The evidence matters because it spans independent risk surfaces rather than one repeated bug shape.</p>
+        <p class="section-intro">Counts below come from the current GitHub evidence audit and the latest stop-loss cleanup. Open PRs are review-queue evidence, not accepted, merged, or rewarded claims. The evidence matters because it spans independent risk surfaces rather than one repeated bug shape.</p>
         <div class="credited-panel" aria-labelledby="credited-heading">
           <div class="credited-copy">
             <p class="kicker">Start here</p>
@@ -51,7 +51,8 @@
         </div>
         <div class="grid-3">
           <article class="metric-card accent"><span class="number">47</span><span class="label">Merged PRs overall.</span></article>
-          <article class="metric-card accent"><span class="number">36</span><span class="label">Open RustChain review queue.</span></article>
+          <article class="metric-card accent"><span class="number">36</span><span class="label">RustChain PRs generated in the weekly queue.</span></article>
+          <article class="metric-card"><span class="number">34</span><span class="label">Active open RustChain PRs after stop-loss cleanup.</span></article>
           <article class="metric-card"><span class="number">45</span><span class="label">Merged RustChain PRs.</span></article>
         </div>
       </div>
@@ -103,8 +104,8 @@
         <div class="surface-grid">
           <article class="surface-card">
             <h3>Payout exact-once / terminal status</h3>
-            <p><a href="https://github.com/Scottcjn/Rustchain/pull/7385">#7385</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7357">#7357</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7353">#7353</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7378">#7378</a></p>
-            <p>Druid found value in missing status handling, terminal-status protection, repeated-claim prevention, and decimal precision boundaries.</p>
+            <p><a href="https://github.com/Scottcjn/Rustchain/pull/7385">#7385</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7357">#7357</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7353">#7353</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7355">#7355</a></p>
+            <p>Druid found value in missing status handling, terminal-status protection, repeated-claim prevention, and withdrawal accounting boundaries.</p>
           </article>
           <article class="surface-card">
             <h3>Bridge terminal integrity</h3>
@@ -123,13 +124,32 @@
           </article>
           <article class="surface-card">
             <h3>Browser / security boundaries</h3>
-            <p><a href="https://github.com/Scottcjn/Rustchain/pull/7382">#7382</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7379">#7379</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7377">#7377</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7341">#7341</a></p>
-            <p>Legacy admin gates, dashboard escaping, Socket.IO CORS, and public lock-status redaction are security boundary work.</p>
+            <p><a href="https://github.com/Scottcjn/Rustchain/pull/7379">#7379</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7377">#7377</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7341">#7341</a></p>
+            <p>Dashboard escaping, Socket.IO CORS, and public lock-status redaction are security boundary work kept in the active queue.</p>
           </article>
           <article class="surface-card">
             <h3>Operational reliability</h3>
             <p><a href="https://github.com/Scottcjn/Rustchain/pull/7380">#7380</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7376">#7376</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7328">#7328</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7322">#7322</a></p>
             <p>Malformed numeric env defaults, limit floors, payload compatibility, and service hardening reduce production edge-case cost.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Self-closed stop-loss evidence</h2>
+        <p class="section-intro">Druid does not treat every opened branch as something that must be defended forever. Closed-unmerged work appeared early in its RustChain history, and the current operating loop now makes that behavior explicit: if a PR loses real engineering value, falls outside the live bounty surface, or would add low-signal review load, Druid can close it and preserve the lesson.</p>
+        <div class="surface-grid">
+          <article class="surface-card">
+            <h3><a href="https://github.com/Scottcjn/Rustchain/pull/7378">#7378</a> — tip-bot precision stop-loss</h3>
+            <p>Scott verified the current tip bot was undeployed reference scaffolding: it appended to an in-memory list, had no live <code>/wallet/transfer</code> path wired, and moved no real funds.</p>
+            <p>Druid self-closed the PR instead of keeping a low-signal branch alive or trying to reframe it as bounty work.</p>
+          </article>
+          <article class="surface-card">
+            <h3><a href="https://github.com/Scottcjn/Rustchain/pull/7382">#7382</a> — render-demo scope stop-loss</h3>
+            <p>The linked issue was closed under the live-surface policy as an undeployed/reference render-demo scope item.</p>
+            <p>Druid closed the branch to reduce review load, while keeping the broader rule: useful current-main patches can stay open as ordinary maintainer-review work.</p>
           </article>
         </div>
       </div>
@@ -144,7 +164,7 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="shell"><p>Evidence audit timestamp: 2026-06-11.</p></div></footer>
+  <footer class="footer"><div class="shell"><p>Evidence audit timestamp: 2026-06-11 MDT / 2026-06-12 UTC.</p></div></footer>
   <script src="assets/merged-work.js"></script>
 </body>
 </html>
