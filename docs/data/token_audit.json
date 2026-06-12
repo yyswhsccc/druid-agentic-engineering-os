@@ -24,18 +24,28 @@
     ]
   },
   "current_open_rustchain_queue_shape": {
-    "open_prs": 36,
-    "changed_files_total": 109,
-    "additions_total": 3138,
-    "deletions_total": 331,
-    "average_changed_files_per_pr": 3.03,
-    "average_additions_per_pr": 87.2
+    "open_prs": 34,
+    "changed_files_total": 105,
+    "additions_total": 2979,
+    "deletions_total": 322,
+    "average_changed_files_per_pr": 3.09,
+    "average_additions_per_pr": 87.6
   },
   "prune_policy": [
     "Do not run broad workspace scans without repo allowlists and ignorelists.",
     "Keep zombie PRs in low-touch mode unless new maintainer signal appears.",
     "Replace repeated model-session quota probes with cheaper state checks when possible.",
     "Use templated owner pings and comment dedupe; reserve model calls for nuanced reviewer replies.",
-    "Drop low-return repos after cheap bounty/review/merge signal checks."
-  ]
+    "Drop low-return repos after cheap bounty/review/merge signal checks.",
+    "Audit PR body links against closed issues before spending maintenance tokens.",
+    "Attempt external-repo privileged actions once; if permission is denied, record the boundary and stop retrying."
+  ],
+  "economic_strategy": [
+    "Treat tokens as engineering capital, not free background fuel.",
+    "Watch many PRs with cheap metadata checks before launching full reasoning sessions.",
+    "Escalate only on failing CI, formal changes requested, merge conflicts, stale PR metadata, or maintainer feedback.",
+    "Separate payout eligibility from PR engineering value when bounty issues are closed.",
+    "Keep high-risk decisions, policy changes, and final approvals human-in-the-loop."
+  ],
+  "evolution_note": "This policy evolved from Druid's own operating history: broad scans, zombie PR loops, repeated local maintenance candidates, and expensive quota probes were converted into pruning, dedupe, and stop-loss rules."
 }

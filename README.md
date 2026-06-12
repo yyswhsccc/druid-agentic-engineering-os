@@ -17,7 +17,7 @@ Last audited: **2026-06-11**.
 | Merged PRs overall | 47 | Publicly merged work across RustChain and selected external repositories. |
 | RustChain merged PRs | 45 | Public maintainer-reviewed outcomes in a real open-source codebase. |
 | Full merged evidence board | 46 proof items | All RustChain merged PRs plus one selected external merged PR, grouped by technical surface. |
-| Current RustChain review queue | 36 open PRs | Test-backed queue across payout, bridge, UTXO, governance, bounty, security, and reliability surfaces. |
+| RustChain review queue | 36 PRs generated / 34 currently open | Test-backed queue across payout, bridge, UTXO, governance, bounty, security, and reliability surfaces; low-signal branches are stopped rather than maintained forever. |
 | New weekly queue | 34 clean PRs opened on 2026-06-11 | Shows systematic risk-surface discovery and small reviewable PR slicing. |
 | Outside RustChain merged proof | 1 selected merged PR | Shows the framework can transfer beyond one repo when the target has real review activity. |
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Token Budget | Druid</title>
-  <meta name="description" content="Druid token budget audit, pruning policy, and low-touch maintenance discipline.">
+  <title>Token Economics | Druid</title>
+  <meta name="description" content="Druid token economics, quota-aware PR maintenance, pruning policy, and low-touch operating discipline.">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
         <a href="druid.html">System</a>
         <a href="week.html">This Week</a>
         <a href="evidence.html">Evidence</a>
-        <a class="active" href="token.html">Token Budget</a>
+        <a class="active" href="token.html">Token Economics</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -25,9 +25,9 @@
   <main>
     <section class="section">
       <div class="shell">
-        <span class="eyebrow">Operational audit</span>
-        <h2>Token budget discipline is part of the framework</h2>
-        <p class="section-intro">Druid is not valuable because it pretends model calls are free. It is valuable because the framework routes expensive reasoning toward high-value PR selection, patching, testing, and review response, while routine tracking runs through GitHub API data, JSON ledgers, dedupe gates, and stop-loss rules.</p>
+        <span class="eyebrow">Operational economics</span>
+        <h2>Druid treats tokens as engineering capital</h2>
+        <p class="section-intro">Druid is not valuable because it burns model calls harder. It is valuable because the operating loop learned to spend expensive reasoning only where it changes an engineering outcome: task selection, bounded patches, tests, CI failures, and real reviewer feedback. Routine PR coverage is pushed into cheap GitHub API checks, JSON ledgers, dedupe gates, and stop-loss rules.</p>
         <div class="audit-grid">
           <article class="audit-card">
             <span class="number">16.3M</span>
@@ -42,11 +42,60 @@
             <span class="label">maintenance comments posted from 45,276 candidate records.</span>
           </article>
           <article class="audit-card">
-            <span class="number">3.03</span>
-            <span class="label">average files touched per open RustChain PR in the current 36-PR queue.</span>
+            <span class="number">3.09</span>
+            <span class="label">average files touched per open RustChain PR in the current 34-PR queue.</span>
           </article>
         </div>
         <p class="small">Audit source: local Druid/Codex logs under <code>~/.codex/bounty-radar</code>, checked on 2026-06-11. These are operational signals, not a billing statement.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>The strategy Druid evolved</h2>
+        <p class="section-intro">This policy was not designed up front as a slide-deck ideal. It emerged from Druid's own operating history: too much broad scanning, too many zombie-PR loops, repeated local maintenance candidates, and expensive quota probes. Those failures became rules that make the system more economical over time.</p>
+        <div class="grid-3">
+          <article class="proof-card">
+            <p class="kicker">1 / Reserve reasoning</p>
+            <h3>Model calls go to decisions</h3>
+            <p>Druid spends tokens on work that needs judgment: choosing high-value issues, proving a bug, writing the smallest safe patch, adding regression tests, or answering real maintainer feedback.</p>
+          </article>
+          <article class="proof-card">
+            <p class="kicker">2 / Automate coverage</p>
+            <h3>Cheap checks hold the queue</h3>
+            <p>Open PRs stay visible through API snapshots, branch cleanliness checks, CI state, review-decision scans, and local ledgers before any expensive agent session is launched.</p>
+          </article>
+          <article class="proof-card">
+            <p class="kicker">3 / Stop losing trades</p>
+            <h3>Stale work gets downgraded</h3>
+            <p>Dirty zombie PRs, closed bounty-scope issues, low-signal repos, and duplicate maintenance drafts are downgraded or stopped instead of repeatedly consuming model attention.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Parallel PR maintenance without runaway token burn</h2>
+        <p class="section-intro">The maintenance layer is designed so a large review queue does not require one full reasoning session per PR per cycle. Druid can watch many PRs in parallel at the metadata layer, then escalate only the few that show a real reason to spend tokens.</p>
+        <div class="surface-grid">
+          <article class="surface-card">
+            <h3>Watch all, reason selectively</h3>
+            <p>GitHub API reads track open/closed state, mergeability, failing checks, pending checks, review decisions, and maintainer comments across the whole queue.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Escalate only on signal</h3>
+            <p>Full agent maintenance is reserved for concrete triggers: failing CI, formal changes requested, merge conflicts, stale PR body metadata, or owner feedback that changes the risk boundary.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Keep zombie PRs cheap</h3>
+            <p>Older dirty PRs remain watch-only unless new maintainer signal appears. They do not consume the same budget as clean high-value PRs waiting in review.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Reduce unattended-risk</h3>
+            <p>Because routine queue state is maintained by cheap checks, Druid is less likely to spend its quota on background analysis while real PR maintenance waits unseen. Low-touch does not mean zero oversight; high-risk decisions still stay human-gated.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -57,7 +106,7 @@
           <article class="surface-card">
             <h3>Doctor loops</h3>
             <p><strong>Observed:</strong> daily macro doctor and hourly doctor logs account for the largest visible token markers: about 9.86M combined.</p>
-            <p><strong>Policy:</strong> keep doctor work for real failures and weekly summaries; avoid high-frequency broad self-analysis.</p>
+            <p><strong>Policy:</strong> keep doctor work for real failures, weekly summaries, and strategy audits; avoid high-frequency broad self-analysis.</p>
           </article>
           <article class="surface-card">
             <h3>PR generation and maintenance</h3>
@@ -98,6 +147,14 @@
             <h3>Low-return repo exploration</h3>
             <p>Repos without reliable bounty, review, merge, or reward signals should not receive expensive agent attention after the initial cheap check.</p>
           </article>
+          <article class="surface-card">
+            <h3>Closed-scope PR loops</h3>
+            <p>When a bounty issue is closed as out-of-scope, Druid separates PR engineering value from payout eligibility. It keeps useful patches as ordinary maintainer-review work, but closes or downgrades branches tied to undeployed/demo-only paths.</p>
+          </article>
+          <article class="surface-card">
+            <h3>Repeated delete or permission attempts</h3>
+            <p>External repo permissions are checked once. If GitHub denies an action such as issue deletion, Druid records the boundary and stops retrying.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -105,7 +162,10 @@
     <section class="section">
       <div class="shell">
         <h2>Why this matters for Druid</h2>
-        <p class="section-intro">The current RustChain queue shows the operating principle: 36 open PRs, 109 changed files total, about 87 additions and 9 deletions per PR on average. The work is small, test-backed, and organized by risk surface. That is the token story: use reasoning to choose and prove compact high-signal changes, then let ledgers and cheap checks carry routine tracking.</p>
+        <p class="section-intro">The current RustChain queue shows the operating principle: 34 open PRs, 105 changed files total, and about 88 additions per PR on average. The work is small, test-backed, and organized by risk surface. That is the token story: use reasoning to choose and prove compact high-signal changes, then let ledgers and cheap checks carry routine tracking.</p>
+        <div class="callout">
+          <p><strong>This is the economic advantage:</strong> Druid can maintain a broad PR queue without treating every open branch as a full new agent session. The framework watches in parallel, spends selectively, records stop-loss decisions, and keeps human approval gates for high-risk actions. The result is not "free automation"; it is a lower-maintenance operating loop that learned how to protect its own attention budget.</p>
+        </div>
         <div class="tag-list">
           <span class="tag">high-value model calls</span>
           <span class="tag">ledger-first maintenance</span>
@@ -113,6 +173,8 @@
           <span class="tag">stop-loss for stale work</span>
           <span class="tag">repo allowlists</span>
           <span class="tag">bounded PR slices</span>
+          <span class="tag">parallel metadata watch</span>
+          <span class="tag">human-gated risk</span>
         </div>
       </div>
     </section>
