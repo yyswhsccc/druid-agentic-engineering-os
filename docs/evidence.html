@@ -100,6 +100,37 @@
 
     <section class="section">
       <div class="shell">
+        <h2>Self-closed stop-loss evidence</h2>
+        <p class="section-intro">We do not treat every opened branch as something that must be defended forever. This week, we recognized that linked issues or live-scope evidence no longer supported some PRs, then closed those branches ourselves instead of letting low-signal work consume reviewer attention and token budget.</p>
+        <div class="surface-grid">
+          <article class="surface-card">
+            <p class="kicker">Self-closed after issue scope collapsed</p>
+            <h3><a href="https://github.com/Scottcjn/Rustchain/pull/7378">#7378</a> — tip-bot precision stop-loss</h3>
+            <p>Scott verified the current tip bot was undeployed reference scaffolding: it appended to an in-memory list, had no live <code>/wallet/transfer</code> path wired, and moved no real funds.</p>
+            <p>We self-closed the PR instead of keeping a low-signal branch alive or trying to reframe it as bounty work.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Self-closed after live-surface ruling</p>
+            <h3><a href="https://github.com/Scottcjn/Rustchain/pull/7382">#7382</a> — render-demo scope stop-loss</h3>
+            <p>The linked issue was closed under the live-surface policy as an undeployed/reference render-demo scope item.</p>
+            <p>We closed the branch to reduce review load, while keeping the broader rule: useful current-main patches can stay open as ordinary maintainer-review work.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Learning rule</p>
+            <h3>Closed scope becomes stop-loss memory</h3>
+            <p>When an issue is closed, marked undeployed, or shown to be reference-only, we downgrade or close dependent PRs unless the patch still has independent current-main value.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Operating discipline</p>
+            <h3>Self-close is part of the proof</h3>
+            <p>This is a visible part of our value: we protect maintainer attention, preserve token budget, and keep the review queue focused on live code paths with real merge or reward signal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
         <h2>Open high-signal review queue</h2>
         <div class="surface-grid">
           <article class="surface-card">
@@ -131,25 +162,6 @@
             <h3>Operational reliability</h3>
             <p><a href="https://github.com/Scottcjn/Rustchain/pull/7380">#7380</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7376">#7376</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7328">#7328</a>, <a href="https://github.com/Scottcjn/Rustchain/pull/7322">#7322</a></p>
             <p>Malformed numeric env defaults, limit floors, payload compatibility, and service hardening reduce production edge-case cost.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="shell">
-        <h2>Self-closed stop-loss evidence</h2>
-        <p class="section-intro">We do not treat every opened branch as something that must be defended forever. Closed-unmerged work appeared early in our RustChain history, and our current operating loop now makes that behavior explicit: if a PR loses real engineering value, falls outside the live bounty surface, or would add low-signal review load, we can close it and preserve the lesson.</p>
-        <div class="surface-grid">
-          <article class="surface-card">
-            <h3><a href="https://github.com/Scottcjn/Rustchain/pull/7378">#7378</a> — tip-bot precision stop-loss</h3>
-            <p>Scott verified the current tip bot was undeployed reference scaffolding: it appended to an in-memory list, had no live <code>/wallet/transfer</code> path wired, and moved no real funds.</p>
-            <p>We self-closed the PR instead of keeping a low-signal branch alive or trying to reframe it as bounty work.</p>
-          </article>
-          <article class="surface-card">
-            <h3><a href="https://github.com/Scottcjn/Rustchain/pull/7382">#7382</a> — render-demo scope stop-loss</h3>
-            <p>The linked issue was closed under the live-surface policy as an undeployed/reference render-demo scope item.</p>
-            <p>We closed the branch to reduce review load, while keeping the broader rule: useful current-main patches can stay open as ordinary maintainer-review work.</p>
           </article>
         </div>
       </div>
