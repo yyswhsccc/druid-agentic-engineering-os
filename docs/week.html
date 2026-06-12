@@ -31,7 +31,7 @@
         <div class="grid-3">
           <article class="metric-card accent"><span class="number">36</span><span class="label">RustChain PRs generated in the test-backed weekly queue.</span></article>
           <article class="metric-card"><span class="number">34</span><span class="label">Active open RustChain PRs currently tracked after stop-loss cleanup.</span></article>
-          <article class="metric-card"><span class="number">2</span><span class="label">Older low-touch maintenance PRs kept out of the main effort budget.</span></article>
+          <article class="metric-card"><span class="number">2</span><span class="label">PRs self-closed after linked issues or live-scope evidence stopped supporting review.</span></article>
         </div>
       </div>
     </section>
@@ -54,12 +54,41 @@
           </div>
           <div class="timeline-item">
             <time>2026-06-12</time>
-            <p>We self-closed low-signal branches after new scope evidence arrived: #7378 was closed after the tip-bot path was verified as undeployed, in-memory-only, and not moving real funds; #7382 was closed after the linked render-demo scope was ruled out by the live-surface policy.</p>
+            <p>We detected that linked issues or bounty scope had been closed, ruled out, or no longer matched the live product surface, then self-closed the PRs tied to those scopes instead of letting low-signal branches consume reviewer attention.</p>
           </div>
           <div class="timeline-item">
             <time>Ongoing</time>
             <p>We track the queue as review evidence. Merge, close, supersede, reward, and maintainer feedback signals feed back into our strategy memory.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>This week's stop-loss actions</h2>
+        <p class="section-intro">We do not treat every opened PR as something to defend forever. This week, we recognized closed or ruled-out issue scope and shut down PRs that no longer had enough live engineering value to justify review load.</p>
+        <div class="surface-grid">
+          <article class="surface-card">
+            <p class="kicker">Self-closed</p>
+            <h3><a href="https://github.com/Scottcjn/Rustchain/pull/7378">RustChain #7378</a></h3>
+            <p>We closed this branch after Scott verified the tip-bot path was undeployed reference scaffolding: in-memory only, no live <code>/wallet/transfer</code> path wired, and no real funds moving.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Self-closed</p>
+            <h3><a href="https://github.com/Scottcjn/Rustchain/pull/7382">RustChain #7382</a></h3>
+            <p>We closed this branch after the linked render-demo issue/scope was ruled out by the live-surface policy, so it would not add stale review load.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Learning rule</p>
+            <h3>Closed scope becomes stop-loss memory</h3>
+            <p>When an issue is closed, marked undeployed, or shown to be reference-only, we downgrade or close dependent PRs unless the patch still has independent current-main value.</p>
+          </article>
+          <article class="surface-card">
+            <p class="kicker">Token policy</p>
+            <h3>We protect review and token budget</h3>
+            <p>Self-closing weak branches keeps maintainer attention and model budget focused on PRs with live code paths, tests, and real merge/reward signal.</p>
+          </article>
         </div>
       </div>
     </section>
