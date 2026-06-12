@@ -199,6 +199,16 @@ a:hover {
   text-transform: uppercase;
 }
 
+.eyebrow a {
+  color: inherit;
+  text-decoration-color: rgba(116, 73, 54, 0.45);
+  text-underline-offset: 4px;
+}
+
+.eyebrow a:hover {
+  color: var(--accent);
+}
+
 h1 {
   margin: 24px 0 18px;
   font-size: clamp(3rem, 6.4vw, 6rem);

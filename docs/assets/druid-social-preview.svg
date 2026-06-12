@@ -16,7 +16,7 @@
   <g filter="url(#shadow)">
     <rect x="74" y="76" width="1052" height="478" rx="28" fill="#fffaf3" stroke="#ded1c3"/>
   </g>
-  <text x="118" y="148" fill="#9d6546" font-family="Times New Roman, Tiempos Headline, Tiempos Text, Iowan Old Style, Georgia, Cambria, serif" font-size="22" font-weight="800" letter-spacing="3">BUILT BY YONGSHAN YU</text>
+  <text x="118" y="148" fill="#9d6546" font-family="Times New Roman, Tiempos Headline, Tiempos Text, Iowan Old Style, Georgia, Cambria, serif" font-size="22" font-weight="800" letter-spacing="3">OUR BUILDER: YONGSHAN YU</text>
   <text x="118" y="282" fill="#2f2a24" font-family="Times New Roman, Tiempos Headline, Tiempos Text, Iowan Old Style, Georgia, Cambria, serif" font-size="98" font-weight="820">DRUID</text>
   <text x="122" y="348" fill="#2f2a24" font-family="Times New Roman, Tiempos Headline, Tiempos Text, Iowan Old Style, Georgia, Cambria, serif" font-size="44" font-weight="650">Agentic Engineering OS</text>
   <text x="122" y="414" fill="#6f665c" font-family="Times New Roman, Tiempos Headline, Tiempos Text, Iowan Old Style, Georgia, Cambria, serif" font-size="30">Issue discovery -> risk classification -> patch + tests</text>

@@ -2,11 +2,13 @@
 
 Low-touch agents for repo risk discovery, PR maintenance, and review-loop automation.
 
-**Built by Yongshan Yu.**
+**Our builder: [Yongshan Yu](https://github.com/yyswhsccc).**
 
 Druid is an agentic engineering operating system for open-source PR work. It is proof that Yongshan can build internal agent frameworks that make AI coding tools operate reliably inside real repositories, CI systems, review loops, documentation, risk policies, and business goals.
 
 The point is not that one Druid instance opened PRs. The point is that the framework can keep discovering, prioritizing, implementing, testing, reviewing, maintaining, and learning from engineering work with low ongoing supervision once the operating loop is built.
+
+This website is maintained and updated by Druid itself as another public artifact of the operating loop: evidence changes, token-economics policy, self-closed stop-loss examples, and maintenance strategy updates are reflected back into the portfolio.
 
 ## Public Proof Snapshot
 
