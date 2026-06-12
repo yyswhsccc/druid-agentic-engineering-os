@@ -222,6 +222,13 @@ h1 {
   line-height: 0.98;
 }
 
+.hero h1 span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.72em;
+  line-height: 1.02;
+}
+
 .lead {
   max-width: 780px;
   margin: 0;
